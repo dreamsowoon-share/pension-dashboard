@@ -313,7 +313,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   .grp{padding:0 9px 10px}
 }
 </style></head><body>
-<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.54", "built": "2026-09-21 22:28", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.54", "t": "4-4 판정소득이 «그 해» 값 · 연도 칸 아래로 · 「본인만」에서 배우자 빠짐", "d": "2026-09-21"}, {"v": "v31.53", "t": "🐛 「본인만·배우자만」으로 보면 퇴직금이 여전히 빠지던 것", "d": "2026-09-21"}, {"v": "v31.52", "t": "🐛 퇴직금이 4-6~4-9 에 «안 들어오던» 버그 · ⚖️ 건보료 갈림길 비교", "d": "2026-09-21"}, {"v": "v31.51", "t": "4-1 🧾 「셈」 접기 글자를 작게", "d": "2026-09-21"}, {"v": "v31.50", "t": "4-4 「건보료」로 이름 변경 · 4-4·4-5 연도 고르기", "d": "2026-09-21"}, {"v": "v31.49", "t": "4부 번호 재배치 · 연도 고르기 · 표 다 보이기 (9건 묶음)", "d": "2026-09-21"}, {"v": "v31.48", "t": "2-1 차례 · 3-2 단계 이름·배치 정리 (8건 묶음)", "d": "2026-09-21"}, {"v": "v31.47", "t": "글자 층을 한 번 더 벌림 (36 / 27 / 20)", "d": "2026-09-21"}]};</script>
+<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.56", "built": "2026-09-21 23:03", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.56", "t": "⚖️ 비교표에 「연기 몇 년」을 적는다 · 3년짜리 추가", "d": "2026-09-21"}, {"v": "v31.55", "t": "🐛 「국민연금 70%만 받기」가 조용히 무시되던 것", "d": "2026-09-21"}, {"v": "v31.54", "t": "4-4 판정소득이 «그 해» 값 · 연도 칸 아래로 · 「본인만」에서 배우자 빠짐", "d": "2026-09-21"}, {"v": "v31.53", "t": "🐛 「본인만·배우자만」으로 보면 퇴직금이 여전히 빠지던 것", "d": "2026-09-21"}, {"v": "v31.52", "t": "🐛 퇴직금이 4-6~4-9 에 «안 들어오던» 버그 · ⚖️ 건보료 갈림길 비교", "d": "2026-09-21"}, {"v": "v31.51", "t": "4-1 🧾 「셈」 접기 글자를 작게", "d": "2026-09-21"}, {"v": "v31.50", "t": "4-4 「건보료」로 이름 변경 · 4-4·4-5 연도 고르기", "d": "2026-09-21"}, {"v": "v31.49", "t": "4부 번호 재배치 · 연도 고르기 · 표 다 보이기 (9건 묶음)", "d": "2026-09-21"}]};</script>
 <script>(function(){try{var t=localStorage.getItem(window.__STORE_KEY__+'_theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <script>
 (function(){
@@ -340,7 +340,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div id="diagmsg" class="mute" style="font-size:12.5px;margin-top:6px;word-break:break-all"></div></div>
 <h1>💰 연금관리, 누구나 노력하면 할 수 있다!</h1>
 <div class="sub">입력값은 <b>각자의 PC나 핸드폰에만</b> 저장되고, <b>다른 사람은 볼 수 없습니다</b><br>
-<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.54</b> &middot; 2026-09-21 22:28 업그레이드되었습니다</span>
+<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.56</b> &middot; 2026-09-21 23:03 업그레이드되었습니다</span>
 <button class="tbtn" id="verbtn" type="button">📋 바뀐 내용 보기</button>
 <span class="themeseg" role="group" aria-label="화면 밝기"><button class="tbtn" id="theme_dark" type="button">🌙 어둡게</button><button class="tbtn" id="theme_light" type="button">☀️ 밝게</button></span>
 <button class="tbtn" id="themebtn" type="button" hidden>🌙 어두운 화면</button>
@@ -2414,6 +2414,13 @@ function recalc(scrollTo){
   // 조기 ↔ 연기 상호배타 안내
   let npWarn = '';
   for (const key of ['a','b']){
+    if ((d[key].np_early || 0) === 0 && (d[key].np_pct || 100) < 100 && (d[key].np_defer || 0) === 0)
+      npWarn += `<li class="dn"><b>${esc(d[key].name || CATEGORY[key])}</b> — 「지금 받을 비율」을
+        <b>${d[key].np_pct}%</b>로 두셨지만 <b>「연기 기간」이 0년</b>이라
+        <b class="dn">이 설정은 계산에 안 들어가고 있습니다</b>(전액 수령으로 계산 중).
+        나머지 ${100 - (d[key].np_pct || 100)}% 를 «몇 년» 미룰지 정해야 합니다 &mdash; 법정 최대 5년입니다.
+        <div class="btns" style="margin-top:6px"><button type="button" class="np_fix" data-k="${key}">
+        ☑ ${esc(d[key].name || CATEGORY[key])} 연기 기간을 <b>5년</b>으로 맞추고 다시 계산</button></div></li>`;
     if ((d[key].np_early || 0) > 0 && ((d[key].np_defer || 0) > 0 || (d[key].np_pct || 100) < 100))
       npWarn += `<li class="dn"><b>${esc(d[key].name || CATEGORY[key])}</b> — 조기수령과 연기연금은
         <b>동시에 쓸 수 없습니다.</b> 조기수령이 우선 적용되고 연기 설정은 무시됩니다.</li>`;
@@ -2490,6 +2497,20 @@ function recalc(scrollTo){
   document.getElementById('out').innerHTML =
     p4.hi + p4.reg + p4.flow + p4.tax + p4.dep + p4.bal;
   if (typeof p4Apply === 'function') p4Apply();     
+  const outB2 = document.getElementById('out');
+  if (outB2 && !outB2.__npFix){
+    outB2.__npFix = true;
+    outB2.addEventListener('click', function(ev){
+      const b = ev.target && ev.target.closest ? ev.target.closest('.np_fix') : null;
+      if (!b) return;
+      const k = b.getAttribute('data-k');
+      const sel = document.getElementById(k + '_np_defer');
+      if (!sel){ b.outerHTML = '<span class="dn">연기 기간 칸을 못 찾았습니다.</span>'; return; }
+      sel.value = '5'; sel.dispatchEvent(new Event('change', {bubbles:true}));
+      recalc(); if (typeof saveLocal === 'function') saveLocal(true);
+      if (typeof flash === 'function') flash('연기 기간을 5년으로 맞췄습니다');
+    });
+  }
   const hySel = document.getElementById('hiYear');
   if (hySel) hySel.addEventListener('change', function(){
     const rs = window.__hiRows || [], dd = window.__hiD;
@@ -3101,10 +3122,16 @@ function mainInflows(hh, d){
 }
 
 const HI_CHOICES = [
-  {k:'now',  t:'지금 계획 그대로',           set:{},                      why:'국민연금을 예정대로 전액 받습니다'},
-  {k:'p90',  t:'국민연금 90%만 받기',        set:{np_pct:90, np_defer:5}, why:'5년간 10%를 미룹니다 — 미룬 몫은 연 7.2%씩 불어 나중에 합쳐 나옵니다'},
-  {k:'p70',  t:'국민연금 70%만 받기',        set:{np_pct:70, np_defer:5}, why:'5년간 30%를 미룹니다'},
-  {k:'e5',   t:'5년 앞당겨 받기',            set:{np_early:5},            why:'평생 30% 깎이지만 판정소득이 «영구히» 낮아집니다'}
+  {k:'now', t:'지금 계획 그대로', set:{},
+   why:'국민연금을 예정대로 전액 받습니다'},
+  {k:'p90', t:'90%만 받기 · 5년 연기', set:{np_pct:90, np_defer:5},
+   why:'5년간 10%를 미룹니다 — 미룬 몫은 연 7.2%씩 불어 6년째부터 합쳐 나옵니다'},
+  {k:'p70', t:'70%만 받기 · 5년 연기', set:{np_pct:70, np_defer:5},
+   why:'5년간 30%를 미룹니다 — 미루는 동안 판정소득이 가장 많이 내려갑니다'},
+  {k:'p70b', t:'70%만 받기 · 3년 연기', set:{np_pct:70, np_defer:3},
+   why:'덜 미루는 대신 더 일찍 전액으로 돌아옵니다 — 5년짜리와 견줘 보십시오'},
+  {k:'e5', t:'5년 앞당겨 받기 (평생 −30%)', set:{np_early:5},
+   why:'평생 30% 깎이지만 판정소득이 «영구히» 낮아집니다'}
 ];
 
 function hiChoiceRun(){
@@ -3143,7 +3170,8 @@ function hiChoiceRun(){
     const best = res.reduce(function(m, x){ return x.net > m.net ? x : m; }, res[0]);
     let h = '<div class="ov"><table><tr><th>선택</th><th class="c-np">🏛️ 국민연금<br>(총 수령)</th>'
           + '<th class="c-hi">🏥 건보료<br>(총 납부)</th><th>세금</th>'
-          + '<th>손에 쥐는 돈<br>(총계)</th><th>지금 계획 대비</th><th>피부양자<br>유지</th></tr>';
+          + '<th>손에 쥐는 돈<br>(총계)</th><th>지금 계획 대비</th>'
+        + '<th>피부양자<br>건보료 0원인 해</th></tr>';
     res.forEach(function(x){
       const gap = x.net - base.net;
       const isBest = (x === best);
@@ -3169,6 +3197,14 @@ function hiChoiceRun(){
       + '</b><br>'
       + '국민연금을 ' + eok(Math.abs(npGap)) + (npGap >= 0 ? ' 더 받고' : ' 덜 받고') + ', '
       + '건보료를 ' + eok(Math.abs(hiGap)) + (hiGap >= 0 ? ' 덜 냅니다.' : ' 더 냅니다.') + '<br>'
+      + (best === base ? '' :
+         '<b class="c-goal">👉 이렇게 하시려면 1-1 국민연금 칸에서 «둘 다» 바꾸셔야 합니다 — '
+         + '「지금 받을 비율」' + (best.o.set.np_pct || 100) + '% <b>＋</b> 「연기 기간」'
+         + (best.o.set.np_defer || 0) + '년.</b> '
+         + '<span class="dn">비율만 바꾸고 연기 기간을 0 으로 두면 계산에 안 들어갑니다.</span><br>')
+      + '<span class="mute"><b>연기는 법으로 최대 5년</b>입니다(65세 개시면 70세까지) · '
+      + '미룬 몫은 <b>연 7.2%</b>씩 불어 연기가 끝난 해부터 «합쳐» 나옵니다 · '
+      + '고를 수 있는 비율은 50·60·70·80·90%.<br></span>'
       + '<span class="mute">피부양자를 «지키는 것» 자체는 목적이 아닙니다 — '
       + '건보료로 아끼는 돈보다 국민연금에서 잃는 돈이 크면 손해입니다. '
       + '위 표의 <b>「손에 쥐는 돈」</b> 한 칸만 보시면 됩니다.</span></div>'
