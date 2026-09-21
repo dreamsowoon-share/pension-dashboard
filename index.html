@@ -63,6 +63,7 @@ b,strong{font-weight:500}
 .kv{background:var(--surf1);border:1px solid var(--line);border-radius:8px;padding:11px}
 .kv .l{color:var(--mute);font-size:11.5px}.kv .v{font-size:18px;font-weight:700;margin-top:2px}
 .ov{overflow-x:auto;max-height:520px;border-radius:8px}
+.ov.full{max-height:none}
 .tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;background:var(--surf2);color:var(--mute);margin-left:4px}
 .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .pcard{background:var(--surf1);border:1px solid var(--line);border-radius:9px;padding:0 0 12px}
@@ -155,6 +156,10 @@ details.sgfold[open]>summary::after{content:'▴ 접기'}
 #part4 .grp,#part4 details,#part4 .ov,#part4 .kv,#part4 .scopehd{font-size:13px}
 #part4 .scopehd{font-weight:700}
 #part4 .gh,#part4 details.sgfold>summary{font-size:22px}
+#part4 b.askhd,#part4 .card b.askhd,.askhd{display:block;font-size:18px;font-weight:500;
+color:var(--txt);margin-bottom:2px}
+#part4 #sg_src_fold>summary,#part4 #hs_who_fold>summary{font-size:14.5px;font-weight:400}
+#part4 #hs_who_fold .gh{font-size:16px}
 #part4 .kv .l{font-size:11.5px}
 #part4 .btns button,#part4 .scopebtn{font-size:13px}
 .isayrs{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
@@ -176,12 +181,12 @@ details.sgfold[open]>summary::after{content:'▴ 접기'}
 .lv3>label small{font-weight:400}
 button.pri.hubbtn small{color:var(--on-accent);opacity:.85}
 .hubbtn small{display:block;font-size:11px;font-weight:400;color:var(--mute);margin-top:1px}
-.pfstep{margin:16px 0 8px;padding:9px 13px;background:var(--surf1);
+.pfstep{margin:18px 0 8px;padding:11px 14px;background:var(--surf1);
 border:1px solid var(--line);border-left:4px solid var(--a-ret);border-radius:0 8px 8px 0;
-font-size:15px;font-weight:700}
+font-size:20px;font-weight:500}
 .pfstep b{display:inline-block;background:var(--a-ret);color:var(--on-accent);
-border-radius:5px;padding:1px 8px;font-size:12px;margin-right:8px;vertical-align:2px}
-.pfstep span{display:block;color:var(--mute);font-size:12.5px;font-weight:400;margin-top:3px}
+border-radius:5px;padding:2px 9px;font-size:15px;font-weight:500;margin-right:9px;vertical-align:2px}
+.pfstep span{display:block;color:var(--mute);font-size:13px;font-weight:400;margin-top:5px}
 summary.pfstep{cursor:pointer;display:block;list-style:none}
 summary.pfstep::-webkit-details-marker{display:none}
 .scopebar{margin:0 0 14px;padding:13px 15px;background:var(--t-goal);
@@ -304,7 +309,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   .grp{padding:0 9px 10px}
 }
 </style></head><body>
-<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.47", "built": "2026-09-21 12:32", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.47", "t": "글자 층을 한 번 더 벌림 (36 / 27 / 20)", "d": "2026-09-21"}, {"v": "v31.46", "t": "1부: 부동산 순서 · 「⚙️ 기타」 없앰 · 2부 예/아니오 단추", "d": "2026-09-21"}, {"v": "v31.45", "t": "「크기가 너무 비슷해서 구별이 안 돼」 · 층을 «크기»로 벌림", "d": "2026-09-21"}, {"v": "v31.44", "t": "「글자가 너무 뚱뚱해」 · Noto Sans KR + 굵기 500", "d": "2026-09-21"}, {"v": "v31.43", "t": "2-1-1 글자·녹색 단추 · ETF 「최신 데이터」 자동 받기 · 1~3부 글자 사다리", "d": "2026-09-21"}, {"v": "v31.41", "t": "4-3 건보료: 계산을 엔진과 한 곳으로 · 가리기 · 재산분 건강보험료 · 연 기준", "d": "2026-09-20"}, {"v": "v31.40", "t": "4부 글자 크기 사다리", "d": "2026-09-20"}, {"v": "v31.39", "t": "55~61: 탈락 까닭 · 표 펼치기 고침 · 소진 금액 풀이 · 탭 묶기", "d": "2026-09-20"}]};</script>
+<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.49", "built": "2026-09-21 14:35", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.49", "t": "4부 번호 재배치 · 연도 고르기 · 표 다 보이기 (9건 묶음)", "d": "2026-09-21"}, {"v": "v31.48", "t": "2-1 차례 · 3-2 단계 이름·배치 정리 (8건 묶음)", "d": "2026-09-21"}, {"v": "v31.47", "t": "글자 층을 한 번 더 벌림 (36 / 27 / 20)", "d": "2026-09-21"}, {"v": "v31.46", "t": "1부: 부동산 순서 · 「⚙️ 기타」 없앰 · 2부 예/아니오 단추", "d": "2026-09-21"}, {"v": "v31.45", "t": "「크기가 너무 비슷해서 구별이 안 돼」 · 층을 «크기»로 벌림", "d": "2026-09-21"}, {"v": "v31.44", "t": "「글자가 너무 뚱뚱해」 · Noto Sans KR + 굵기 500", "d": "2026-09-21"}, {"v": "v31.43", "t": "2-1-1 글자·녹색 단추 · ETF 「최신 데이터」 자동 받기 · 1~3부 글자 사다리", "d": "2026-09-21"}, {"v": "v31.41", "t": "4-3 건보료: 계산을 엔진과 한 곳으로 · 가리기 · 재산분 건강보험료 · 연 기준", "d": "2026-09-20"}]};</script>
 <script>(function(){try{var t=localStorage.getItem(window.__STORE_KEY__+'_theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <script>
 (function(){
@@ -331,13 +336,13 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div id="diagmsg" class="mute" style="font-size:12.5px;margin-top:6px;word-break:break-all"></div></div>
 <h1>💰 연금관리, 누구나 노력하면 할 수 있다!</h1>
 <div class="sub">입력값은 <b>각자의 PC나 핸드폰에만</b> 저장되고, <b>다른 사람은 볼 수 없습니다</b><br>
-<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.47</b> &middot; 2026-09-21 12:32 업그레이드되었습니다</span>
+<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.49</b> &middot; 2026-09-21 14:35 업그레이드되었습니다</span>
 <button class="tbtn" id="verbtn" type="button">📋 바뀐 내용 보기</button>
 <span class="themeseg" role="group" aria-label="화면 밝기"><button class="tbtn" id="theme_dark" type="button">🌙 어둡게</button><button class="tbtn" id="theme_light" type="button">☀️ 밝게</button></span>
 <button class="tbtn" id="themebtn" type="button" hidden>🌙 어두운 화면</button>
 <div id="verpanel" class="card" hidden style="margin-top:8px;font-size:12.5px"></div></div>
 
-<div id="hub" class="hub"><div class="hubgrid"><button class="hubcard h-p1" data-go="1"><div class="hleft"><div class="hnum">1부</div><div class="httl">현재 상황 파악하기</div></div><div class="hright"><div class="hdesc"></div><div class="hitem">1-1 내 정보 입력</div></div></button><button class="hubcard h-p2" data-go="2"><div class="hleft"><div class="hnum">2부</div><div class="httl">모으기</div></div><div class="hright"><div class="hdesc">매달 얼마씩 넣어 은퇴 자산을 만들지 정합니다</div><div class="hitem">2-1 돈을 모아 봅시다 · 2-2 결과를 확인해 봅니다</div></div></button><button class="hubcard h-p3" data-go="3"><div class="hleft"><div class="hnum">3부</div><div class="httl">불리기</div></div><div class="hright"><div class="hdesc">모은 돈을 어떤 비중으로 굴릴 것인가 — 기대수익률과 계좌 규제를 함께 봅니다</div><div class="hitem">3-1 ETF 고르기 · 3-2 포트폴리오 &amp; 실전 매매</div></div></button><button class="hubcard h-p4" data-go="4"><div class="hleft"><div class="hnum">4부</div><div class="httl">연금 찾기</div></div><div class="hright"><div class="hdesc">만 55세부터 꺼내는 단계 — 언제 열지, 세금·건보료, 계좌가 마르는 시점</div><div class="hitem">4-1 55세 연금개시 가이드 · 4-2 퇴직소득세 · 4-3 건보료 · 4-4 현금흐름 · 4-5 세금 · 4-6 소진 · 4-7 잔액 · 4-8~4-9 건강보험</div></div></button></div><div class="btns" id="hubctl"><button id="hub_home" class="hubbtn">⌂ 처음 화면<small>1~4부 카드로 돌아갑니다</small></button><button id="hub_all" class="hubbtn">전체 보기<small>1~4부를 한 화면에 모두 펼칩니다</small></button><button class="hubcard-lite hubbtn" data-go="9">부록<small>확인이 필요한 가정값 · 쉽게 풀어보기</small></button></div><div class="mute" id="hubhint" style="font-size:12.5px;margin-top:8px"><b>무엇부터 할까요?</b> — 처음이면 <b class="c-goal">1부</b>부터 채우십시오. 1부의 값이 2·3·4부 계산에 그대로 쓰입니다.</div></div>
+<div id="hub" class="hub"><div class="hubgrid"><button class="hubcard h-p1" data-go="1"><div class="hleft"><div class="hnum">1부</div><div class="httl">현재 상황 파악하기</div></div><div class="hright"><div class="hdesc"></div><div class="hitem">1-1 내 정보 입력</div></div></button><button class="hubcard h-p2" data-go="2"><div class="hleft"><div class="hnum">2부</div><div class="httl">모으기</div></div><div class="hright"><div class="hdesc">매달 얼마씩 넣어 은퇴 자산을 만들지 정합니다</div><div class="hitem">2-1 돈을 모아 봅시다 · 2-2 결과를 확인해 봅니다</div></div></button><button class="hubcard h-p3" data-go="3"><div class="hleft"><div class="hnum">3부</div><div class="httl">불리기</div></div><div class="hright"><div class="hdesc">모은 돈을 어떤 비중으로 굴릴 것인가 — 기대수익률과 계좌 규제를 함께 봅니다</div><div class="hitem">3-1 ETF 고르기 · 3-2 포트폴리오 &amp; 실전 매매</div></div></button><button class="hubcard h-p4" data-go="4"><div class="hleft"><div class="hnum">4부</div><div class="httl">연금 찾기</div></div><div class="hright"><div class="hdesc">만 55세부터 꺼내는 단계 — 언제 열지, 세금·건보료, 계좌가 마르는 시점</div><div class="hitem">4-1 55세 연금개시 가이드 · 4-2 퇴직소득세 · 4-3 건보료·피부양자 판정 · 4-4~4-5 건강보험 · 4-6 현금흐름 · 4-7 세금 · 4-8 소진 · 4-9 잔액</div></div></button></div><div class="btns" id="hubctl"><button id="hub_home" class="hubbtn">⌂ 처음 화면<small>1~4부 카드로 돌아갑니다</small></button><button id="hub_all" class="hubbtn">전체 보기<small>1~4부를 한 화면에 모두 펼칩니다</small></button><button class="hubcard-lite hubbtn" data-go="9">부록<small>확인이 필요한 가정값 · 쉽게 풀어보기</small></button></div><div class="mute" id="hubhint" style="font-size:12.5px;margin-top:8px"><b>무엇부터 할까요?</b> — 처음이면 <b class="c-goal">1부</b>부터 채우십시오. 1부의 값이 2·3·4부 계산에 그대로 쓰입니다.</div></div>
 
 <section class="part" id="part1" data-part="1">
 <div class="phd h-p1"><b>1부 · 현재 상황 파악하기</b></div>
@@ -392,7 +397,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div class="row2" style="padding-left:14px"><label>배우자 <b>사업자등록</b>이 있습니까?</label>
   <div><label style="display:flex;gap:6px;align-items:center;font-size:13px">
     <input type="checkbox" id="b_biz" style="width:auto"> 있음</label></div></div>
-<div class="row2"><label>피부양자 판정 <small>입력값으로 자동 · 자세한 것은 <b>4-8</b></small></label>
+<div class="row2"><label>피부양자 판정 <small>입력값으로 자동 · 자세한 것은 <b>4-4</b></small></label>
   <div id="supporter_auto" class="mute" style="font-size:13px;background:var(--inp);border:1px solid var(--line);
        border-radius:6px;padding:7px 9px">—</div></div>
 
@@ -415,9 +420,10 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div class="card" style="border-color:var(--ret);margin-bottom:9px">
   <b>👥 누구 기준으로 볼까</b>
   <div class="scopebtns" style="margin-top:7px">
-    <button class="acscopebtn on" type="button" data-v="ab">👫 부부 합산</button>
+    
     <button class="acscopebtn" type="button" data-v="a">🙋 본인만</button>
     <button class="acscopebtn" type="button" data-v="b">🙋‍♂️ 배우자만</button>
+    <button class="acscopebtn on" type="button" data-v="ab">👫 부부 합산</button>
   </div>
   <select id="ac_scope" class="vis-hidden" tabindex="-1" aria-hidden="true">
     <option value="ab" selected>부부 합산</option>
@@ -577,10 +583,11 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 
 <h2>3-2 포트폴리오 &amp; 실전 매매 <span class="tag">연 8%를 어떻게 만드는가</span></h2>
 <div class="card">
-<div class="pfstep"><b>1단계</b> 자산배분 전략을 고르세요
-  <span>이미 만들어진 전략을 그대로 쓸지, <b>나만의 포트폴리오</b>를 직접 짤지 정합니다</span></div>
-<div class="bigpick"><label>자산배분 전략 <small>고르면 <b>기대수익률·계좌 가능 여부</b>를 바로 진단합니다 &mdash;
-  직접 짜시려면 <b>맨 아래 「🛠️ 나만의 포트폴리오」</b>를 고르십시오</small></label>
+
+<div class="pfstep"><b>3-2-1</b> 자산배분 전략을 고르세요
+  <span>이미 만들어진 전략을 그대로 쓸지, <span id="pf_custom_hl">나만의 포트폴리오</span>를 직접 짤지 정합니다</span></div>
+<div class="bigpick"><label>자산배분 전략 <small>고르면 기대수익률·계좌 가능 여부를 바로 진단합니다 &mdash;
+  직접 짜시려면 맨 아래 「🛠️ 나만의 포트폴리오」를 고르십시오</small></label>
   <select id="pfSelect" class="bigsel">
     
     <optgroup label="김성일 (글로벌 디테일 분할)">
@@ -618,21 +625,22 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div id="pfInbox" style="display:none"></div>
 <div id="pfCustom" style="display:none"></div>
 
-<div class="pfstep"><b>2단계</b> 이 조합이면 얼마나 벌까 &mdash; 진단
-  <span>고른 <b>비중</b>만으로 <b>기대수익률</b>과 <b>연금계좌에서 살 수 있는지</b>가 바로 나옵니다.
-  <b>금액은 아직 몰라도 됩니다</b> &mdash; 비중만 정해지면 수익률은 정해지니까요</span></div>
-
-<div id="pfComp"></div>
 <div id="pfVenn"></div>
+
+
+<div class="pfstep"><b>3-2-2</b> 이 조합이면 얼마나 벌까 &mdash; 진단
+  <span>고른 비중만으로 기대수익률과 연금계좌에서 살 수 있는지가 바로 나옵니다.
+  금액은 아직 몰라도 됩니다 &mdash; 비중만 정해지면 수익률은 정해지니까요</span></div>
+<div id="pfComp"></div>
 <div id="pfInfo"></div>
 
 
-<details class="pfstep3" id="pf_step3"><summary class="pfstep"><b>3단계</b> 배분할 금액을 정하세요 &mdash; 얼마만큼 살까 <em class="mute" style="font-style:normal;font-size:12px">(눌러서 펼치기)</em>
-  <span>2단계에서 마음에 드는 조합을 찾았으면, 이제 <b>그 비중을 얼마에 적용할지</b>를 정합니다.
+<details class="pfstep3" id="pf_step3"><summary class="pfstep"><b>3-2-3</b> 배분할 금액을 정하세요 &mdash; 얼마만큼 살까 <em class="mute" style="font-style:normal;font-size:13px;font-weight:400">(필요하면 하이라이트 부분을 눌러서 펼쳐서 사용하세요)</em>
+  <span>3-2-2 에서 마음에 드는 조합을 찾았으면, 이제 그 비중을 얼마에 적용할지를 정합니다.
   맨 아래 표가 <b>종목별 금액 → 몇 주</b>까지 계산합니다</span></summary>
 <div class="card mute" style="font-size:12.5px;margin:11px 0 0">
 <b class="c-ret">💡 아래 두 칸은 「몇 주 사면 되나」를 계산하려고 묻는 것입니다.</b>
-기대수익률은 <b>2단계에서 이미 나왔고</b>, 이 금액과는 상관이 없습니다 &mdash;
+기대수익률은 <b>3-2-2 에서 이미 나왔고</b>, 이 금액과는 상관이 없습니다 &mdash;
 금액은 <b>종목별로 얼마씩·몇 주</b>를 뽑는 데만 씁니다.
 </div>
 <div class="row2"><label>얼마만큼 살까 <small>그 금액을 <b>어디서 가져올지</b> 고릅니다 &mdash; <b>지금 실제로 낼 수 있는 돈</b>만 고르십시오</small></label>
@@ -675,17 +683,18 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 
 <button data-p4="1">4-1 개시 가이드</button><button data-p4="2">4-2 퇴직소득세</button>
 <button data-p4="3">4-3 건보료</button>
-<button data-p4="4,5,6,7">4-4~4-7 현금흐름 · 세금 · 소진 · 잔액</button>
-<button data-p4="8,9">4-8~4-9 건강보험</button><button data-p4="all">모두</button>
+<button data-p4="4,5">4-4~4-5 건강보험</button>
+<button data-p4="6,7,8,9">4-6~4-9 현금흐름 · 세금 · 소진 · 잔액</button><button data-p4="all">모두</button>
 </div>
 <div class="scopebar">
   <div class="scopehd">👥 누구 기준으로 볼까
-    <span>아래 <b>4-4 현금흐름 · 4-5 세금 · 4-6 소진 · 4-7 잔액 · 4-8~4-9 건강보험</b>이
+    <span>아래 <b>4-4~4-5 건강보험 · 4-6 현금흐름 · 4-7 세금 · 4-8 소진 · 4-9 잔액</b>이
     여기서 고른 기준으로 다시 계산됩니다 &mdash; <b>1-1 입력은 그대로</b>입니다</span></div>
   <div class="scopebtns">
-    <button class="scopebtn on" data-v="ab">👫 부부 합산</button>
+    
     <button class="scopebtn" data-v="a">🙋 본인만</button>
     <button class="scopebtn" data-v="b">🙋‍♂️ 배우자만</button>
+    <button class="scopebtn on" data-v="ab">👫 부부 합산</button>
   </div>
   <select id="p4_scope" class="vis-hidden" tabindex="-1" aria-hidden="true">
     <option value="ab" selected>부부 합산</option>
@@ -711,7 +720,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   <div class="gh">🎯 4-1-2 몇 살에 개시할까 <span>1부·2부·3부에 넣은 값을 그대로 이어받아 비교합니다</span></div>
   
   <div class="card" id="sg_use_box" style="margin:0 0 9px">
-  <b>이미 입력한 값을 사용할까요?</b>
+  <b class="askhd">이미 입력한 값을 사용할까요?</b>
   <div class="ynbtns" style="margin-top:8px">
     <button type="button" id="sg_use_yes">예</button>
     <button type="button" id="sg_use_no">아니오</button>
@@ -720,7 +729,8 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   <div class="up" style="font-size:13px"><b>✅ 이미 입력한 내용을 사용합니다</b></div>
   
   <details class="fold sgfold" id="sg_src_fold" style="margin-top:7px">
-  <summary>이 계산에 쓰는 값 — 내용이 궁금하면 누르세요</summary>
+  
+  <summary id="sg_src_sum">1부에서 입력한 값으로 계산한 <b>전체 금액</b>이 궁금하면 누르세요</summary>
   <div id="sg_src"></div>
   
   <input type="checkbox" id="sg_link" checked hidden>
@@ -771,18 +781,8 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 
 
 
-<h2>4-3 건보료를 계산해 봅시다 <span class="tag">피부양자 자격 · 퇴직 후 건보료</span></h2>
 
-<div class="card" id="hs_ask">
-  <b>이전에 사용한 데이터를 사용할까요?</b>
-  <span class="mute" style="font-size:12.5px">— 1부 1-1 에 넣은 국민연금·인출액·배당·재산을 그대로 가져옵니다</span>
-  <div class="ynbtns" style="margin-top:8px">
-    <button type="button" id="hs_yes" class="pri">예 — 넣은 값 그대로</button>
-    <button type="button" id="hs_no">아니오 — 직접 넣기</button>
-  </div>
-  <div id="hs_ask_note" class="mute" style="font-size:12px;margin-top:6px"></div>
-  <div class="mute" style="font-size:11.5px;margin-top:4px">이 칸은 1-1 과 따로 놉니다 — 여기서 바꿔도 다른 표는 안 바뀝니다.</div>
-</div>
+<h2>4-3 건보료 · 피부양자 등재 여부 판정 <span class="tag">퇴직 후 건보료가 얼마나 나오나</span></h2>
 
 
 <details class="fold sgfold" id="hs_who_fold">
@@ -792,6 +792,18 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   <div id="hs_who"></div>
 </div>
 </details>
+
+<div class="card" id="hs_ask">
+  <b class="askhd">이전에 사용한 데이터를 사용할까요?</b>
+  <span class="mute" style="font-size:12.5px">— 1부 1-1 에 넣은 국민연금·인출액·배당·재산을 그대로 가져옵니다</span>
+  <div class="ynbtns" style="margin-top:8px">
+    <button type="button" id="hs_yes" class="pri">예 — 넣은 값 그대로</button>
+    <button type="button" id="hs_no">아니오 — 직접 넣기</button>
+  </div>
+  <div id="hs_ask_note" class="mute" style="font-size:12px;margin-top:6px"></div>
+  <div class="mute" style="font-size:11.5px;margin-top:4px">이 칸은 1-1 과 따로 놉니다 — 여기서 바꿔도 다른 표는 안 바뀝니다.</div>
+</div>
+
 
 <div class="grp g-hi">
   <div class="gh">🏥 시뮬레이션 입력 <span>바꾸면 아래 표가 바로 다시 계산됩니다</span></div>
@@ -805,7 +817,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
     </select></div>
 
   <div class="row2"><label>기준 연도 <small>이 해의 나이로 <b>국민연금·사적연금 인출액</b>을 1-1 계획에서 가져옵니다</small></label>
-    <input type="number" id="hs_year" value="2030"></div>
+    <select id="hs_year"></select></div>   
   <div id="hs_year_note" style="font-size:12px;margin:2px 0 6px"></div>
 
   <div class="pgrid" style="margin-top:10px">
@@ -2456,8 +2468,16 @@ function recalc(scrollTo){
     }
   }
   document.getElementById('out').innerHTML =
-    p4.flow + p4.tax + p4.dep + p4.bal + p4.hi + p4.reg;
+    p4.hi + p4.reg + p4.flow + p4.tax + p4.dep + p4.bal;
   if (typeof p4Apply === 'function') p4Apply();     
+  const tySel = document.getElementById('taxYear');
+  if (tySel) tySel.addEventListener('change', function(){
+    const box = document.getElementById('taxBody'), rs = window.__taxRows || [];
+    const r = rs.find(x => String(x.year) === String(tySel.value));
+    if (!box) return;
+    box.innerHTML = r ? taxYearHTML(r)
+      : '<div class="card warn">' + esc(tySel.value) + '년 자료를 못 찾았습니다.</div>';
+  });
   const chOn = document.getElementById('p4_child_on');
   if (chOn) chOn.addEventListener('click', function(){
     const c = document.getElementById('has_working_child');
@@ -2625,7 +2645,56 @@ function renderSummary(sim, d){
 
 // 결과 화면을 «조각»으로 돌려준다.
 //   1-2 목표달성은 1부에, 나머지는 4부에 들어가야 해서 한 덩어리로 뭉쳐 둘 수 없다.
-//   조각 이름 → goal(1-2) / flow(4-4) / tax(4-5) / dep(4-6) / bal(4-7) / hi(4-8) / reg(4-9)
+//   조각 이름 → goal(1-2) / hi(4-4) / reg(4-5) / flow(4-6) / tax(4-7) / dep(4-8) / bal(4-9)
+//   ⚠️ v31.49 에 번호가 바뀌었다 — 조각 «이름»은 그대로 두고 번호만 옮겼다.
+
+function taxYearHTML(first){
+  let h = `<div class="ov"><table>
+    <tr><th rowspan="2">주체</th><th rowspan="2" class="c-np">🏛️ 국민연금</th>
+    <th rowspan="2" class="c-wd">💸 연금계좌<br>인출</th>
+    <th colspan="3">인출 재원별 (법정 순서)</th><th rowspan="2">과세방식</th>
+    <th rowspan="2">계좌 세금</th><th rowspan="2">종합과세</th><th rowspan="2">합계</th></tr>
+    <tr><th>①비과세</th><th>②퇴직</th><th>③과세</th></tr>`;
+  for (const key of ['a','b']){
+    const p = first.per[key], w = p.withdrawal, s = w.by_source;
+    h += `<tr><td>${esc(p.name)}</td><td>${won(p.national_pension)}</td><td>${won(w.gross)}</td>
+      <td class="mute">${won(s.non_deducted)}</td><td class="mute">${won(s.retirement)}</td>
+      <td class="mute">${won(s.taxable)}</td><td>${esc(w.mode)}</td>
+      <td class="dn">${won(w.total_tax)}</td><td class="dn">${won(p.comp.total_tax)}</td>
+      <td class="dn"><b>${won(p.tax)}</b></td></tr>`;
+  }
+  h += '</table></div>';
+  let notes = '';
+  for (const key of ['a','b'])
+    for (const n of (first.per[key].withdrawal.notes || []))
+      notes += `<li><b>${esc(first.per[key].name)}</b> — ${n}</li>`;
+  // 계좌별 인출 내역
+  let accRows = '';
+  for (const key of ['a','b']){
+    const p = first.per[key], w = p.withdrawal;
+    for (const det of (w.by_account || [])){
+      const s2 = det.by_source || {};
+      accRows += `<tr><td>${esc(p.name)}</td>
+        <td class="${det.kind==='IRP'?'c-irp':'c-sv'}"><b>${esc(det.kind)}</b></td>
+        <td class="c-wd">${won(det.amount)}</td>
+        <td class="mute">${won(s2.non_deducted||0)}</td><td class="mute">${won(s2.retirement||0)}</td>
+        <td class="mute">${won(s2.taxable||0)}</td><td>${won(det.limit)}</td>
+        <td class="${det.over>0?'dn':'mute'}">${det.over>0?won(det.over):'—'}</td></tr>`;
+    }
+  }
+  if (accRows) h += `<h3 style="font-size:14.5px;margin:16px 0 5px;color:var(--oi)">계좌별 인출 내역</h3>
+    <div class="ov"><table><tr><th>주체</th><th>계좌</th><th class="c-wd">💸 인출액</th>
+    <th>①비과세</th><th>②퇴직</th><th>③과세</th><th>수령한도</th><th>한도초과</th></tr>${accRows}</table></div>
+    <div class="card mute" style="font-size:12.5px">인출액은 두 계좌의 <b>평가액 비율</b>로 배분됩니다.
+    재원 순서와 연금수령한도는 <b>계좌별로 따로</b> 적용되지만,
+    1,500만원 저율분리과세 한도는 <b>두 계좌 합산 과세재원</b>으로 판정합니다.</div>`;
+
+  h += `<div class="card"><b>재원 순서가 세금을 결정합니다</b> — ①세액공제 안 받은 원금(<b>비과세</b>) →
+    ②이연퇴직소득(퇴직소득세의 70/60%) → ③세액공제분+운용수익(연금소득세 3.3~5.5%) 순으로 나갑니다.
+    <b>1,500만원 한도 판정도 ③만</b> 셉니다.${notes?`<ul>${notes}</ul>`:''}</div>`;
+
+  return h;
+}
 function render(sim, d){
   const rows = sim.rows, first = rows[0], last = rows[rows.length-1];
   const S = {};
@@ -2643,7 +2712,7 @@ function render(sim, d){
   if (diffYear)
     h += `<div class="card mute" style="font-size:12.5px">부부가 <b>같은 해에 시작하지 않습니다</b>.
       각자 <b>처음 돈이 들어오는 해</b>를 기준으로 계산했으므로 아래 「기준 연도」가 서로 다를 수 있습니다.
-      연도별로 이어지는 흐름은 <b>4-4 연도별 현금흐름</b>에서 보십시오.</div>`;
+      연도별로 이어지는 흐름은 <b>4-6 연도별 현금흐름</b>에서 보십시오.</div>`;
   h += '<div class="ov"><table><tr><th>주체</th><th>기준 연도<br><span class="mute">받기 시작</span></th>' +
        '<th class="c-goal">🎯 월 목표<br><span class="mute">필요</span></th>' +
        '<th class="c-np">🏛️ 국민연금</th><th class="c-wd">💸 연금계좌<br>인출</th><th class="c-inc">💰 배당·이자</th>' +
@@ -2684,15 +2753,15 @@ function render(sim, d){
     <b>월 목표</b>는 매달 쓸 생활비 <b>총액</b>이고, <b>월 인출액</b>은 그중 <b>연금계좌에서 빼는 몫</b>입니다.<br>
     <span class="mute">월 목표 = 국민연금 + 연금계좌 인출 + 배당·이자</span><br>
     위 표에서 <b>「부족 / 여유」가 마이너스면 인출액을 늘리거나 목표를 낮춰야</b> 합니다.
-    다만 인출을 늘리면 세금과 계좌 소진 시점이 함께 나빠지니 4-4~4-6 표도 같이 보십시오.<br>
-    <span class="mute">⚠️ 여기 「실제 월수입」은 세금만 뺀 값입니다. 건보료는 가구 단위라 개인별로 나누지 않고 4-4 표에 따로 뺐습니다.</span></div>`;
+    다만 인출을 늘리면 세금과 계좌 소진 시점이 함께 나빠지니 4-6~4-8 표도 같이 보십시오.<br>
+    <span class="mute">⚠️ 여기 「실제 월수입」은 세금만 뺀 값입니다. 건보료는 가구 단위라 개인별로 나누지 않고 4-6 표에 따로 뺐습니다.</span></div>`;
 
   S.goal = h; h = '';
 
   // ③ 건강보험
   if (window.__npWarn)
     h += `<div class="card warn"><b>⚠️ 국민연금 수급 시기 설정 확인</b><ul>${window.__npWarn}</ul></div>`;
-  h += `<h2>4-8 건강보험 — 피부양자 등재 가능 여부</h2>
+  h += `<h2>4-4 건강보험 — 피부양자 등재 가능 여부</h2>
     <div class="card mute" style="font-size:12.5px"><b>두 단계로 나뉩니다</b> —
     ① 위 「판정 방식」은 <b>얹힐 대상이 누구인지</b>만 정합니다(구조).
     ② 실제 등재 가능 여부는 <b>소득·재산 요건</b>으로 여기서 판정합니다(결과).<br>
@@ -2788,7 +2857,7 @@ function render(sim, d){
     · <b>사적연금(연금저축·IRP)</b>으로 → 판정소득 <b>0원</b> → <b class="up">통과</b><br>
     · <b>일반계좌 배당</b>으로 → 판정소득 6,000만원 → <b class="dn">탈락</b><br>
     &rarr; <b>건보료만 놓고 보면 연금계좌로 채우는 것이 압도적으로 유리합니다.</b>
-    다만 연금계좌는 인출한도·계좌 소진이 걸리니 4-4~4-6 표와 함께 보십시오.</div>
+    다만 연금계좌는 인출한도·계좌 소진이 걸리니 4-6~4-8 표와 함께 보십시오.</div>
     <div class="card warn"><b>⚠️ 이 앱에서 가장 불확실한 변수</b><br>
     「사적연금은 건보료 소득에 안 센다」는 <b>현행 제도</b>이지만 부과 전환 논의가 진행 중입니다.
     만약 바뀌면 위 <b>사적연금</b> 줄이 <b>통과 → 탈락</b>으로 뒤집히고, 이 앱의 결론도 통째로 달라집니다.
@@ -2797,7 +2866,7 @@ function render(sim, d){
   S.hi = h; h = '';
 
   // ④ 연도별
-  h += '<h2>4-4 연도별 현금흐름</h2><div class="ov"><table><tr><th>연도</th>'+
+  h += '<h2>4-6 연도별 현금흐름</h2><div class="ov full"><table><tr><th>연도</th>'+
     `<th>${esc(first.per.a.name)}<br>나이</th><th>${esc(first.per.b.name)}<br>나이</th>`+
     '<th class="c-np">🏛️ 국민연금</th><th>총소득</th><th>세금</th><th>건보료</th><th>순현금(월)</th><th>피부양자</th></tr>';
   for (const r of rows){
@@ -2816,67 +2885,20 @@ function render(sim, d){
   }
   h += '</table></div>';
 
-  const peak = rows.reduce((m,r)=>r.net_monthly>m.net_monthly?r:m, rows[0]);
-  const trough = rows.reduce((m,r)=>r.net_monthly<m.net_monthly?r:m, rows[0]);
-  h += `<div class="grid">
-    <div class="kv"><div class="l">최고 — ${peak.year}년</div><div class="v up">월 ${won(peak.net_monthly)}원</div></div>
-    <div class="kv"><div class="l">최저 — ${trough.year}년</div><div class="v dn">월 ${won(trough.net_monthly)}원</div></div>
-    <div class="kv"><div class="l">첫 해 세금+건보료</div><div class="v">${won(first.tax+first.hi)}원</div></div>
-    <div class="kv"><div class="l">마지막 해 세금+건보료</div><div class="v">${won(last.tax+last.hi)}원</div></div></div>`;
 
   S.flow = h; h = '';
 
   // ⑤ 세금 구조
-  h += `<h2>4-5 세금이 어디서 나오나 <span class="tag">${first.year}년</span></h2>
-    <div class="ov"><table>
-    <tr><th rowspan="2">주체</th><th rowspan="2" class="c-np">🏛️ 국민연금</th>
-    <th rowspan="2" class="c-wd">💸 연금계좌<br>인출</th>
-    <th colspan="3">인출 재원별 (법정 순서)</th><th rowspan="2">과세방식</th>
-    <th rowspan="2">계좌 세금</th><th rowspan="2">종합과세</th><th rowspan="2">합계</th></tr>
-    <tr><th>①비과세</th><th>②퇴직</th><th>③과세</th></tr>`;
-  for (const key of ['a','b']){
-    const p = first.per[key], w = p.withdrawal, s = w.by_source;
-    h += `<tr><td>${esc(p.name)}</td><td>${won(p.national_pension)}</td><td>${won(w.gross)}</td>
-      <td class="mute">${won(s.non_deducted)}</td><td class="mute">${won(s.retirement)}</td>
-      <td class="mute">${won(s.taxable)}</td><td>${esc(w.mode)}</td>
-      <td class="dn">${won(w.total_tax)}</td><td class="dn">${won(p.comp.total_tax)}</td>
-      <td class="dn"><b>${won(p.tax)}</b></td></tr>`;
-  }
-  h += '</table></div>';
-  let notes = '';
-  for (const key of ['a','b'])
-    for (const n of (first.per[key].withdrawal.notes || []))
-      notes += `<li><b>${esc(first.per[key].name)}</b> — ${n}</li>`;
-  // 계좌별 인출 내역
-  let accRows = '';
-  for (const key of ['a','b']){
-    const p = first.per[key], w = p.withdrawal;
-    for (const det of (w.by_account || [])){
-      const s2 = det.by_source || {};
-      accRows += `<tr><td>${esc(p.name)}</td>
-        <td class="${det.kind==='IRP'?'c-irp':'c-sv'}"><b>${esc(det.kind)}</b></td>
-        <td class="c-wd">${won(det.amount)}</td>
-        <td class="mute">${won(s2.non_deducted||0)}</td><td class="mute">${won(s2.retirement||0)}</td>
-        <td class="mute">${won(s2.taxable||0)}</td><td>${won(det.limit)}</td>
-        <td class="${det.over>0?'dn':'mute'}">${det.over>0?won(det.over):'—'}</td></tr>`;
-    }
-  }
-  if (accRows) h += `<h3 style="font-size:14.5px;margin:16px 0 5px;color:var(--oi)">계좌별 인출 내역</h3>
-    <div class="ov"><table><tr><th>주체</th><th>계좌</th><th class="c-wd">💸 인출액</th>
-    <th>①비과세</th><th>②퇴직</th><th>③과세</th><th>수령한도</th><th>한도초과</th></tr>${accRows}</table></div>
-    <div class="card mute" style="font-size:12.5px">인출액은 두 계좌의 <b>평가액 비율</b>로 배분됩니다.
-    재원 순서와 연금수령한도는 <b>계좌별로 따로</b> 적용되지만,
-    1,500만원 저율분리과세 한도는 <b>두 계좌 합산 과세재원</b>으로 판정합니다.</div>`;
-
-  h += `<div class="card"><b>재원 순서가 세금을 결정합니다</b> — ①세액공제 안 받은 원금(<b>비과세</b>) →
-    ②이연퇴직소득(퇴직소득세의 70/60%) → ③세액공제분+운용수익(연금소득세 3.3~5.5%) 순으로 나갑니다.
-    <b>1,500만원 한도 판정도 ③만</b> 셉니다.${notes?`<ul>${notes}</ul>`:''}</div>`;
-
+  window.__taxRows = rows;
+  h += `<h2>4-7 세금이 어디서 나오나 <span class="tag">`
+    + `<select id="taxYear" style="font-size:12px;padding:1px 4px;width:auto">`
+    + rows.map(r => `<option value="${r.year}">${r.year}년 (만 ${r.per.a.age}세)</option>`).join('')
+    + `</select></span></h2><div id="taxBody">` + taxYearHTML(first) + `</div>`;
   S.tax = h; h = '';
 
   // ⑥ 계좌 소진
   var lastAge = rows.length ? (rows[rows.length-1].year - d.a.birth_year) : 0;
-  h += '<h2>4-6 연금계좌 소진 전망</h2>'
+  h += '<h2>4-8 연금계좌 소진 전망</h2>'
      + '<div class="card mute" style="font-size:12.5px">아래 숫자는 <b>마지막 해('
      + (rows.length ? rows[rows.length-1].year : '') + '년'
      + (lastAge ? ' · 본인 만 ' + lastAge + '세' : '') + ')에 계좌에 남는 돈</b>입니다 — '
@@ -2934,7 +2956,7 @@ function render(sim, d){
       }
       h += '</table></div>'
         + '<div class="mute" style="font-size:12px;margin-top:6px">한 해씩 어떻게 움직였는지는 '
-        + '<b>4-7 연금계좌 잔액 추이</b> 표에 그대로 나옵니다 — 그 표의 <b>마지막 줄</b>이 이 금액입니다.</div></div>';
+        + '<b>4-9 연금계좌 잔액 추이</b> 표에 그대로 나옵니다 — 그 표의 <b>마지막 줄</b>이 이 금액입니다.</div></div>';
     }
   }
   h += `<div class="card"><b>운용수익이 반영됩니다</b> — 인출하고 남은 잔액은 계속 굴러가므로
@@ -2958,8 +2980,8 @@ function render(sim, d){
       }
     }
   }
-  h += `<h2>4-7 연금계좌 잔액 추이 <span class="tag">인출하면서 계속 운용</span></h2>
-    <div class="ov" style="max-height:420px"><table>
+  h += `<h2>4-9 연금계좌 잔액 추이 <span class="tag">인출하면서 계속 운용</span></h2>
+    <div class="ov full"><table>
     <tr><th>연도</th><th>주체</th><th>계좌</th><th>기초잔액</th><th class="c-wd">💸 인출</th>
     <th class="c-ret">📈 운용수익</th><th>기말잔액</th></tr>
     ${flowRows}</table></div>
@@ -2972,7 +2994,7 @@ function render(sim, d){
 
   // ⑧ 지역가입자 내역
   const rg = first.b.region;
-  h += `<h2>4-9 지역가입자 보험료 내역 <span class="tag">${first.year}년 · 근사치</span></h2>
+  h += `<h2>4-5 지역가입자 보험료 내역 <span class="tag">${first.year}년 · 근사치</span></h2>
     <div class="card"><table>
     <tr><td>소득 산정액 <span class="mute">(공적연금 50% + 금융·사업·근로)</span></td><td>${won(rg.income_base)}원</td></tr>
     <tr><td>소득보험료 <span class="mute">(정률제)</span></td><td>${won(rg.income_premium)}원/월</td></tr>
@@ -3250,6 +3272,7 @@ function foldAuto(){
         if (el.closest('details') || el.closest('.pcard') || !el.parentNode) return;
         var label = '';
         if (el.classList.contains('ov')){
+          if (el.classList.contains('full')) return;   
           var t = el.querySelector('table'); if (!t || t.rows.length < 16) return;
           label = '📋 표 펼치기 (' + (t.rows.length - 1) + '줄)';
         } else {
@@ -3770,7 +3793,7 @@ function inboxNotice(n){
     + '<div style="font-weight:700;color:var(--oi)">📥 ETF 대시보드에서 담아 온 종목 '+n+'개가 있습니다</div>'
     + '<div class="mute" style="font-size:12.5px;margin-top:5px">'
     + '이 종목들은 <b>나만의 포트폴리오</b>에만 넣을 수 있습니다. '
-    + '위 <b>1단계</b>에서 전략을 <b>「🛠️ 나만의 포트폴리오」</b>로 바꾸십시오.</div>'
+    + '위 <b>3-2-1</b>에서 전략을 <b>「🛠️ 나만의 포트폴리오」</b>로 바꾸십시오.</div>'
     + '<div class="btns" style="margin-top:9px">'
     + '<button class="pri" id="ibGo">🛠️ 나만의 포트폴리오로 바꾸기</button></div></div>';
   var g=document.getElementById('ibGo');
@@ -3872,9 +3895,7 @@ function inboxRender(force){
     +'여기서 바꿔야 그 값으로 들어갑니다.<br>'
     +'기대수익·위험 구분은 <b>그 자산군의 가정</b>을 그대로 씁니다(이름과 총보수만 들어갑니다).</div>'
     +'<div class="btns" style="margin-top:0;margin-bottom:9px">'
-    +'<button class="pri" id="ibAll">⬇ 적은 대로 전부 넣기</button>'
-    +'<button id="ibFresh">기존 비중 지우고 전부 넣기</button>'
-    +'<button id="ibClear">목록 비우기</button></div>'
+    +'<button class="pri" id="ibAll">⬇ 적은 대로 전부 넣기</button></div>'
     +'<div class="ov"><table><tr><th>담아 온 종목</th><th>총보수</th>'
     +'<th>넣을 자산군</th><th>비중 %</th><th></th></tr>';
   for(var j=0;j<v.length;j++){
@@ -3970,13 +3991,6 @@ function inboxRender(force){
   }
   var allBtn=document.getElementById('ibAll');
   if(allBtn) allBtn.addEventListener('click', function(){ putAll(false); });
-  var freshBtn=document.getElementById('ibFresh');
-  if(freshBtn) freshBtn.addEventListener('click', function(){ putAll(true); });
-  var clrBtn=document.getElementById('ibClear');
-  if(clrBtn) clrBtn.addEventListener('click', function(){
-    if(!confirm('담아 온 목록을 비웁니다.\n이미 넣은 것은 그대로 남습니다.\n\n진행할까요?')) return;
-    pfInboxSave([]); inboxRender(true);
-  });
 
   function putAll(clearFirst){
     var list=pfInbox(); if(!list.length) return;
@@ -4206,19 +4220,13 @@ function openPick(i){
 
 function cwRender(){
   var box=document.getElementById('pfCustom'); if(!box) return;
-  var opts='<option value="" disabled selected>↙ 출발점으로 베껴 올 전략 고르기…</option>';
-  for(var k in PFNAME){ opts+='<option value="'+k+'">'+esc(PFNAME[k])+'</option>'; }
   var tools=
     '<div class="btns" style="margin-top:13px">'+
-      '<select id="cwFrom" style="max-width:240px">'+opts+'</select>'+
-      '<button id="cwLoad">↙ 이 전략을 출발점으로</button>'+
       '<button id="cwNorm">합계 100%로 맞추기</button>'+
       '<button id="cwDedup">🧹 정리 (중복·안 고른 것)</button>'+
       '<button id="cwZero">전부 비우기</button>'+
     '</div>'+
     '<div class="mute" style="font-size:11.5px;margin-top:8px;line-height:1.75">'+
-    '· <b>↙ 이 전략을 출발점으로</b> — 왼쪽에서 고른 전략의 비중을 <b>그대로 가져와 덮어씁니다</b> '+
-    '(지금 넣어 둔 값은 사라집니다)<br>'+
     '· <b>합계 100%로 맞추기</b> — 넣은 값들의 <b>비율은 그대로</b> 두고 합계만 100%로 고칩니다. '+
     '예: 20·20·10 <span class="mute">(합계 50%)</span> → <b>40·40·20</b><br>'+
     '· <b>🧹 정리</b> — 같은 종목이 두 칸에 든 것, 담은 적 없는데 들어가 있는 것을 뺍니다<br>'+
@@ -4290,9 +4298,11 @@ function cwRender(){
       clearTimeout(window.__cwT); window.__cwT=setTimeout(pfRender, 300);
     });
   }
-  document.getElementById('cwLoad').addEventListener('click', function(){
-    var k=document.getElementById('cwFrom').value;
-    if(!k){ alert('먼저 왼쪽 칸에서 «출발점으로 베껴 올 전략»을 고르십시오.'); return; }
+  var loadBtn=document.getElementById('cwLoad');
+  if(loadBtn) loadBtn.addEventListener('click', function(){
+    var from=document.getElementById('cwFrom'); if(!from) return;
+    var k=from.value;
+    if(!k){ return; }   
     if(cwTotal()>0 && !confirm('「'+(PFNAME[k]||k)+'」의 비중을 그대로 가져옵니다.\n\n'+
       '⚠️ 지금 넣어 둔 비중은 «전부 덮어써집니다». 진행할까요?')) return;
     cwFromPF(k); cwSyncInputs(); cwSumView(); cwSave(); pfRender();
@@ -4927,6 +4937,8 @@ function calcDetail(a){
 function pfRender(){
   var sel=document.getElementById('pfSelect'); if(!sel) return;
   var key=sel.value;
+  var hl=document.getElementById('pf_custom_hl');
+  if(hl){ hl.className = (key==='custom') ? 'oi' : ''; }
   var cbox=document.getElementById('pfCustom');
   var ibox=document.getElementById('pfInbox');
   if(key==='custom'){
@@ -5083,7 +5095,7 @@ function pfComp(list){
     + rows + '</table></div>'
     + '<div class="mute" style="font-size:11.5px;margin-top:8px">'
     + '이 표는 <b>읽기 전용</b>입니다 — 이미 만들어진 전략이라 비중을 고칠 수 없습니다. '
-    + '직접 바꾸시려면 위 1단계에서 <b>「🛠️ 나만의 포트폴리오」</b>를 고르십시오.</div>'
+    + '직접 바꾸시려면 위 3-2-1 에서 <b>「🛠️ 나만의 포트폴리오」</b>를 고르십시오.</div>'
     + '</div>';
 }
 
@@ -5521,11 +5533,26 @@ function hsFillYear(){
   });
 }
 
+function hsYearOptions(){
+  var sel = document.getElementById('hs_year');
+  if (!sel || sel.tagName !== 'SELECT') return;
+  var y0 = 0, y1 = 0;
+  try { var d = readForm(); y0 = Math.round(Number(d.y0)) || 0; y1 = Math.round(Number(d.y1)) || 0; } catch(e){}
+  if (!y0) y0 = new Date().getFullYear() + 1;
+  if (!y1 || y1 < y0) y1 = y0 + 40;
+  var keep = sel.value, h = '';
+  for (var y = y0; y <= y1; y++) h += '<option value="' + y + '">' + y + '년</option>';
+  if (sel.innerHTML === h) return;                 
+  sel.innerHTML = h;
+  if (keep && sel.querySelector('option[value="' + keep + '"]')) sel.value = keep;
+}
+
 function hsLoadFromMain(){
   try{
     if (typeof readForm !== 'function' || typeof toEngine !== 'function') return false;
     var d = readForm(), e = toEngine(d);
     var y = Math.round(Number(d.y0)) || (new Date().getFullYear()+1);
+    hsYearOptions();                       
     document.getElementById('hs_year').value = y;
     var na = document.getElementById('hs_name_a'), nb = document.getElementById('hs_name_b');
     if (na) na.textContent = e.a.name || '본인';
@@ -5738,7 +5765,7 @@ function hsRender(){
     + '</table></div>'
     + '<div class="card ok" style="font-size:12.5px"><b>💡 같은 금액이라도 받는 통로에 따라 건보료가 갈립니다.</b> '
     + '사적연금은 현행 제도상 판정소득에 <b>아예 안 셉니다</b>. '
-    + '다만 연금계좌는 <b>인출한도·계좌 소진</b>이 걸리니 4-4~4-6 표와 함께 보십시오.<br>'
+    + '다만 연금계좌는 <b>인출한도·계좌 소진</b>이 걸리니 4-6~4-8 표와 함께 보십시오.<br>'
     + '<b class="oi">⚠️ 「사적연금 미부과」가 이 앱에서 가장 불확실한 값입니다</b> — 부과로 바뀌면 위 초록 줄이 탈락으로 뒤집힙니다(부록 A 참조).</div>';
 
   h += '<div class="card mute" style="font-size:12px">근사치입니다. 재산 점수 선형 근사·경감제도 미적용 등 '
@@ -5932,7 +5959,7 @@ function renderTax(){
    '</table></div>' +
    '<div class="mute" style="font-size:12px;margin:4px 0 12px">' +
    '처음 몇 해는 ①이 나가서 세금이 거의 0이다가, ①이 마르는 해부터 갑자기 늘어납니다. ' +
-   '그 시점은 <b>4-5 세금이 어디서 나오나</b>·<b>4-7 잔액 추이</b> 표에서 확인하십시오.</div>' +
+   '그 시점은 <b>4-7 세금이 어디서 나오나</b>·<b>4-9 잔액 추이</b> 표에서 확인하십시오.</div>' +
 
    '<b>② 나이가 낮을수록 세율이 높습니다</b> — 55세 개시의 유일한 «세금상» 불리함' +
    '<div class="ov"><table><tr><th>나이</th><th>연금소득세율</th><th></th></tr>' + rows + '</table></div>' +
@@ -5962,7 +5989,7 @@ function renderTax(){
    '<div class="mute" style="font-size:12px;margin-top:4px">한도를 초과해 인출하면 초과분은 ' +
    '<b>연금이 아닌 것</b>으로 보아 기타소득세 ' + pct(P.over_limit_rate || 0.165) + ' 입니다. ' +
    '다만 초과분이 ①·② 재원에서 나가면 그 부분은 원래 세금이 다르므로, ' +
-   '실제 금액은 4-5 표의 <b>한도초과</b> 칸을 보십시오.</div>';
+   '실제 금액은 4-7 표의 <b>한도초과</b> 칸을 보십시오.</div>';
 
   var box = el('sg_tax'); if (box) box.innerHTML = h;
 }
@@ -6014,7 +6041,7 @@ function renderOps(){
    '</table></div>' +
    '<div class="mute" style="font-size:12px;margin-top:4px">' +
    '널리 쓰이는 경험칙일 뿐이고 국내 실증도 아닙니다. ' +
-   '<b>그대로 믿지 말고 4-6 소진 전망·4-7 잔액 추이에서 직접 확인하십시오</b> — ' +
+   '<b>그대로 믿지 말고 4-8 소진 전망·4-9 잔액 추이에서 직접 확인하십시오</b> — ' +
    '수익률을 1~2%p 낮춰 보는 것이 가장 정직한 점검입니다.</div>' +
 
    '<div class="card warn" style="margin-top:12px">' +
@@ -6359,6 +6386,25 @@ function sgRun(d, startAge, y0, y1, opt){
 
 function sgSources(d, acc, pfNet, base, later){
   var box = el('sg_src'); if (!box) return;
+  var sm = document.getElementById('sg_src_sum');
+  if (sm){
+    var sa = 0;
+    try {
+      var cand = [];
+      ['a','b'].forEach(function(k){
+        if (!d[k] || !(d[k].birth_year >= 1900)) return;
+        var v = (typeof wdStartAgeOf === 'function') ? wdStartAgeOf(d, k) : (d[k].wd_start || 0);
+        if (v > 0) cand.push(v);
+      });
+      sa = cand.length ? Math.min.apply(null, cand) : 0;
+    } catch(e){ sa = 0; }
+    var endA = (typeof AUTO_END_AGE === 'number') ? AUTO_END_AGE : 95;
+    sm.innerHTML = sa
+      ? '1부에서 입력한 <b>만 ' + sa + '세 개시</b>했을 때 <b>만 ' + endA
+        + '세</b>까지 <b>전체 금액</b>이 궁금하면 누르세요'
+      : '1부에서 입력한 값으로 계산한 <b>전체 금액</b>이 궁금하면 누르세요 '
+        + '<span class="dn">(1-1 출생연도를 넣으면 개시 나이가 여기 적힙니다)</span>';
+  }
   var rows = [];
   var sc0 = sgScope();
   rows.push(['4부 · 누구 기준',
