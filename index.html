@@ -313,7 +313,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   .grp{padding:0 9px 10px}
 }
 </style></head><body>
-<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.56", "built": "2026-09-21 23:03", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.56", "t": "⚖️ 비교표에 「연기 몇 년」을 적는다 · 3년짜리 추가", "d": "2026-09-21"}, {"v": "v31.55", "t": "🐛 「국민연금 70%만 받기」가 조용히 무시되던 것", "d": "2026-09-21"}, {"v": "v31.54", "t": "4-4 판정소득이 «그 해» 값 · 연도 칸 아래로 · 「본인만」에서 배우자 빠짐", "d": "2026-09-21"}, {"v": "v31.53", "t": "🐛 「본인만·배우자만」으로 보면 퇴직금이 여전히 빠지던 것", "d": "2026-09-21"}, {"v": "v31.52", "t": "🐛 퇴직금이 4-6~4-9 에 «안 들어오던» 버그 · ⚖️ 건보료 갈림길 비교", "d": "2026-09-21"}, {"v": "v31.51", "t": "4-1 🧾 「셈」 접기 글자를 작게", "d": "2026-09-21"}, {"v": "v31.50", "t": "4-4 「건보료」로 이름 변경 · 4-4·4-5 연도 고르기", "d": "2026-09-21"}, {"v": "v31.49", "t": "4부 번호 재배치 · 연도 고르기 · 표 다 보이기 (9건 묶음)", "d": "2026-09-21"}]};</script>
+<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.57", "built": "2026-09-21 23:40", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.57", "t": "🏢 직장가입자 건보료를 «제대로» 계산", "d": "2026-09-21"}, {"v": "v31.56", "t": "⚖️ 비교표에 「연기 몇 년」을 적는다 · 3년짜리 추가", "d": "2026-09-21"}, {"v": "v31.55", "t": "🐛 「국민연금 70%만 받기」가 조용히 무시되던 것", "d": "2026-09-21"}, {"v": "v31.54", "t": "4-4 판정소득이 «그 해» 값 · 연도 칸 아래로 · 「본인만」에서 배우자 빠짐", "d": "2026-09-21"}, {"v": "v31.53", "t": "🐛 「본인만·배우자만」으로 보면 퇴직금이 여전히 빠지던 것", "d": "2026-09-21"}, {"v": "v31.52", "t": "🐛 퇴직금이 4-6~4-9 에 «안 들어오던» 버그 · ⚖️ 건보료 갈림길 비교", "d": "2026-09-21"}, {"v": "v31.51", "t": "4-1 🧾 「셈」 접기 글자를 작게", "d": "2026-09-21"}, {"v": "v31.50", "t": "4-4 「건보료」로 이름 변경 · 4-4·4-5 연도 고르기", "d": "2026-09-21"}]};</script>
 <script>(function(){try{var t=localStorage.getItem(window.__STORE_KEY__+'_theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <script>
 (function(){
@@ -340,7 +340,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div id="diagmsg" class="mute" style="font-size:12.5px;margin-top:6px;word-break:break-all"></div></div>
 <h1>💰 연금관리, 누구나 노력하면 할 수 있다!</h1>
 <div class="sub">입력값은 <b>각자의 PC나 핸드폰에만</b> 저장되고, <b>다른 사람은 볼 수 없습니다</b><br>
-<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.56</b> &middot; 2026-09-21 23:03 업그레이드되었습니다</span>
+<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.57</b> &middot; 2026-09-21 23:40 업그레이드되었습니다</span>
 <button class="tbtn" id="verbtn" type="button">📋 바뀐 내용 보기</button>
 <span class="themeseg" role="group" aria-label="화면 밝기"><button class="tbtn" id="theme_dark" type="button">🌙 어둡게</button><button class="tbtn" id="theme_light" type="button">☀️ 밝게</button></span>
 <button class="tbtn" id="themebtn" type="button" hidden>🌙 어두운 화면</button>
@@ -911,7 +911,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 파이썬 엔진과 계산 일치 검증 완료(<code>test_js_parity</code>)</div>
 </div>
 
-<script>window.__RULES__ = {"pension": {"separate_threshold": 15000000, "separate_rate_over": 0.165, "low_rate_by_age": [[55, 69, 0.055], [70, 79, 0.044], [80, 200, 0.033]], "retire_disc_10y": 0.7, "retire_disc_after": 0.6, "limit_multiplier": 1.2, "limit_base_years": 11, "over_limit_rate": 0.165, "legacy_join_before": 2013, "legacy_start_yi": 6}, "ops": {"min_start_age": 55, "min_membership_years": 5, "membership_waived_for_retirement": true, "min_receiving_years": 10, "irp_risk_cap": 0.7, "savings_risk_cap": 1.0, "early_termination_rate": 0.165, "cash_bucket_years": 3}, "np": {"deferral_increase_per_year": 0.072, "deferral_max_years": 5, "partial_receive_options": [50, 60, 70, 80, 90, 100], "early_decrease_per_year": 0.06, "early_max_years": 5, "a_value_monthly": 3190000, "start_age_by_birth": [[1952, 60], [1956, 61], [1960, 62], [1964, 63], [1968, 64], [null, 65]]}, "comp": {"pension_deduction_brackets": [[3500000, 0, 1.0], [7000000, 3500000, 0.4], [14000000, 4900000, 0.2], [null, 6300000, 0.1]], "pension_deduction_cap": 9000000, "basic_deduction": 1500000, "elderly_deduction": 1000000, "elderly_age": 70, "brackets": [[14000000, 0.06, 0], [50000000, 0.15, 1260000], [88000000, 0.24, 5760000], [150000000, 0.35, 15440000], [300000000, 0.38, 19940000], [500000000, 0.4, 25940000], [1000000000, 0.42, 35940000], [null, 0.45, 65940000]], "local_rate": 0.1}, "rt": {"service_deduction": [[5, 0, 1000000], [10, 5000000, 2000000], [20, 15000000, 2500000], [null, 40000000, 3000000]], "converted_deduction": [[8000000, 0, 1.0], [70000000, 8000000, 0.6], [100000000, 45200000, 0.55], [300000000, 61700000, 0.45], [null, 151700000, 0.35]], "severance_days": 30, "fallback_rate": 0.03}, "hi": {"dependent_income_threshold": 20000000, "financial_exempt_ceiling": 10000000, "biz_ceiling_no_reg": 5000000, "np_ratio_dependent": 1.0, "np_ratio_region": 0.5, "private_pension_counts": false, "prop_low": 540000000, "prop_high": 900000000, "prop_mid_income_cap": 10000000, "insurance_rate": 0.0709, "region_prop_deduction": 100000000, "region_point_value": 208, "region_points_per_10m": 2.7, "region_min_monthly": 19780, "grace_discount": {"1": 0.8, "2": 0.6, "3": 0.4, "4": 0.2}, "grace_expires_year": 2026, "apply_grace_after_expiry": false}};</script>
+<script>window.__RULES__ = {"pension": {"separate_threshold": 15000000, "separate_rate_over": 0.165, "low_rate_by_age": [[55, 69, 0.055], [70, 79, 0.044], [80, 200, 0.033]], "retire_disc_10y": 0.7, "retire_disc_after": 0.6, "limit_multiplier": 1.2, "limit_base_years": 11, "over_limit_rate": 0.165, "legacy_join_before": 2013, "legacy_start_yi": 6}, "ops": {"min_start_age": 55, "min_membership_years": 5, "membership_waived_for_retirement": true, "min_receiving_years": 10, "irp_risk_cap": 0.7, "savings_risk_cap": 1.0, "early_termination_rate": 0.165, "cash_bucket_years": 3}, "np": {"deferral_increase_per_year": 0.072, "deferral_max_years": 5, "partial_receive_options": [50, 60, 70, 80, 90, 100], "early_decrease_per_year": 0.06, "early_max_years": 5, "a_value_monthly": 3190000, "start_age_by_birth": [[1952, 60], [1956, 61], [1960, 62], [1964, 63], [1968, 64], [null, 65]]}, "comp": {"pension_deduction_brackets": [[3500000, 0, 1.0], [7000000, 3500000, 0.4], [14000000, 4900000, 0.2], [null, 6300000, 0.1]], "pension_deduction_cap": 9000000, "basic_deduction": 1500000, "elderly_deduction": 1000000, "elderly_age": 70, "brackets": [[14000000, 0.06, 0], [50000000, 0.15, 1260000], [88000000, 0.24, 5760000], [150000000, 0.35, 15440000], [300000000, 0.38, 19940000], [500000000, 0.4, 25940000], [1000000000, 0.42, 35940000], [null, 0.45, 65940000]], "local_rate": 0.1}, "rt": {"service_deduction": [[5, 0, 1000000], [10, 5000000, 2000000], [20, 15000000, 2500000], [null, 40000000, 3000000]], "converted_deduction": [[8000000, 0, 1.0], [70000000, 8000000, 0.6], [100000000, 45200000, 0.55], [300000000, 61700000, 0.45], [null, 151700000, 0.35]], "severance_days": 30, "fallback_rate": 0.03}, "hi": {"dependent_income_threshold": 20000000, "financial_exempt_ceiling": 10000000, "biz_ceiling_no_reg": 5000000, "np_ratio_dependent": 1.0, "np_ratio_region": 0.5, "private_pension_counts": false, "prop_low": 540000000, "prop_high": 900000000, "prop_mid_income_cap": 10000000, "insurance_rate": 0.0709, "region_prop_deduction": 100000000, "region_point_value": 208, "region_points_per_10m": 2.7, "region_min_monthly": 19780, "wage_extra_deduction": 20000000, "grace_discount": {"1": 0.8, "2": 0.6, "3": 0.4, "4": 0.2}, "grace_expires_year": 2026, "apply_grace_after_expiry": false}};</script>
 <script>
 // ── 유틸 ─────────────────────────────────────────────
 const R = window.__RULES__;   // 파이썬 rules_2026.py 에서 주입
@@ -1297,6 +1297,19 @@ function incomeActive(hh, year){
   }
   return changed ? h : hh;
 }
+function wagePremiumOf(p, year){
+  const rate = R.hi.insurance_rate;
+  const wage = Math.max(0, p.earned || 0);              
+  const payroll = Math.round(wage * rate / 2);          
+  const extra = nationalPensionIn(p, year) + financialIncome(p)
+              + (p.business || 0) + (p.other || 0);     
+  const ded = R.hi.wage_extra_deduction;   
+  const over = Math.max(0, extra - ded);
+  const extraPrem = Math.round(over / 12 * rate) * 12;
+  return {wage, payroll, extra_income: extra, deduction: ded,
+          over_amount: over, extra_premium: extraPrem, annual: payroll + extraPrem};
+}
+
 function runYear(hhIn, year, yearsSinceLoss=0){
   const hh = incomeActive(hhIn, year);
   const per = {}; let grossAll = 0, taxAll = 0;
@@ -1323,9 +1336,20 @@ function runYear(hhIn, year, yearsSinceLoss=0){
   const region = regionPremium(hh, year, yearsSinceLoss);
   const a = {available:dep.maintains, hi:0, net:grossAll - taxAll};
   const b = {available:true, hi:region.annual, net:grossAll - taxAll - region.annual, region};
-  const applies = dep.maintains ? 'A' : 'B';
-  const actual = applies === 'A' ? a : b;
-  return {year, per, gross:grossAll, tax:taxAll, dep, a, b, applies,
+  const wKeys = ['a','b'].filter(k => hh[k].is_workplace);
+  let w = null;
+  if (wKeys.length){
+    const detail = {}; let sum = 0;
+    for (const k of wKeys){ detail[k] = wagePremiumOf(hh[k], year); sum += detail[k].annual; }
+    const nonW = ['a','b'].filter(k => !hh[k].is_workplace && hh[k].birth_year >= 1900);
+    const nonWPays = (nonW.length && !dep.maintains) ? region.annual : 0;
+    const hiW = sum + nonWPays;
+    w = {available:true, hi:hiW, net:grossAll - taxAll - hiW,
+         detail, wage_total:sum, non_workplace_region:nonWPays, region};
+  }
+  const applies = w ? 'W' : (dep.maintains ? 'A' : 'B');
+  const actual = applies === 'W' ? w : (applies === 'A' ? a : b);
+  return {year, per, gross:grossAll, tax:taxAll, dep, a, b, w, applies,
           hi:actual.hi, net:actual.net, net_monthly:Math.floor(actual.net/12),
           ab_diff: a.net - b.net};
 }
@@ -2966,7 +2990,9 @@ function render(sim, d){
       <td>${won(npAll)}${npNote}</td>
       <td>${won(r.gross)}</td><td class="dn">${won(r.tax)}</td><td class="dn">${won(r.hi)}</td>
       <td class="oi"><b>${won(r.net_monthly)}</b></td>
-      <td>${r.applies==='A'?'<span class="up">등재</span>':'<span class="dn">지역</span>'}</td></tr>`;
+      <td>${r.applies==='A'?'<span class="up">등재</span>'
+           :r.applies==='W'?'<span class="oi">직장</span>'
+           :'<span class="dn">지역</span>'}</td></tr>`;
   }
   h += '</table></div>';
 
@@ -3161,7 +3187,7 @@ function hiChoiceRun(){
         hi  += (r.hi || 0);
         tax += (r.tax || 0);
         net += (r.net_monthly || 0) * 12;
-        if (r.applies === 'A') depY++;
+        if (r.applies === 'A') depY++;   
         n++;
       });
       return {o:o, np:np, hi:hi, tax:tax, net:net, depY:depY, n:n};
