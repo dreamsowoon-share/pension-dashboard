@@ -318,7 +318,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   .grp{padding:0 9px 10px}
 }
 </style></head><body>
-<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.65", "built": "2026-10-04 16:56", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.65", "t": "🐛 «담을 계좌»를 눌렀는데 담기지 않던 것", "d": "2026-10-04"}, {"v": "v31.64", "t": "☑️ ETF 고르기에서 «담을 계좌» 고르기", "d": "2026-10-04"}, {"v": "v31.63", "t": "➡️ 계좌별 수익률을 3부 연금 계산에", "d": "2026-10-04"}, {"v": "v31.62", "t": "💼 일반 계좌 · 계좌별 포트폴리오(2-3-1-1~4) · 계좌별 수익(2-3-2)", "d": "2026-10-04"}, {"v": "v31.61", "t": "🔀 부 구성 바꾸기 — 2부 «모으기와 불리기» · 3부 «연금 찾기»", "d": "2026-10-04"}, {"v": "v31.60", "t": "🏦 DC형 퇴직금에 «앞으로 해마다 들어올 한 달치» 더하기", "d": "2026-09-30"}, {"v": "v31.59", "t": "🧺 ISA 「만기 뒤 다시 가입해 계속 넣기」", "d": "2026-09-21"}, {"v": "v31.58", "t": "💸 「어느 계좌에서 먼저 뺄까」를 고를 수 있게", "d": "2026-09-21"}]};</script>
+<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.66", "built": "2026-10-04 17:32", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.66", "t": "🐛 계좌 비중을 고쳐도 2-3-2 숫자가 안 바뀌던 것 · «전체» = 네 계좌 합산", "d": "2026-10-04"}, {"v": "v31.65", "t": "🐛 «담을 계좌»를 눌렀는데 담기지 않던 것", "d": "2026-10-04"}, {"v": "v31.64", "t": "☑️ ETF 고르기에서 «담을 계좌» 고르기", "d": "2026-10-04"}, {"v": "v31.63", "t": "➡️ 계좌별 수익률을 3부 연금 계산에", "d": "2026-10-04"}, {"v": "v31.62", "t": "💼 일반 계좌 · 계좌별 포트폴리오(2-3-1-1~4) · 계좌별 수익(2-3-2)", "d": "2026-10-04"}, {"v": "v31.61", "t": "🔀 부 구성 바꾸기 — 2부 «모으기와 불리기» · 3부 «연금 찾기»", "d": "2026-10-04"}, {"v": "v31.60", "t": "🏦 DC형 퇴직금에 «앞으로 해마다 들어올 한 달치» 더하기", "d": "2026-09-30"}, {"v": "v31.59", "t": "🧺 ISA 「만기 뒤 다시 가입해 계속 넣기」", "d": "2026-09-21"}]};</script>
 <script>(function(){try{var t=localStorage.getItem(window.__STORE_KEY__+'_theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <script>
 (function(){
@@ -345,7 +345,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div id="diagmsg" class="mute" style="font-size:12.5px;margin-top:6px;word-break:break-all"></div></div>
 <h1>💰 연금관리, 누구나 노력하면 할 수 있다!</h1>
 <div class="sub">입력값은 <b>각자의 PC나 핸드폰에만</b> 저장되고, <b>다른 사람은 볼 수 없습니다</b><br>
-<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.65</b> &middot; 2026-10-04 16:56 업그레이드되었습니다</span>
+<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.66</b> &middot; 2026-10-04 17:32 업그레이드되었습니다</span>
 <button class="tbtn" id="verbtn" type="button">📋 바뀐 내용 보기</button>
 <span class="themeseg" role="group" aria-label="화면 밝기"><button class="tbtn" id="theme_dark" type="button">🌙 어둡게</button><button class="tbtn" id="theme_light" type="button">☀️ 밝게</button></span>
 <button class="tbtn" id="themebtn" type="button" hidden>🌙 어두운 화면</button>
@@ -5280,31 +5280,33 @@ function analyze(list){
           known:known, foreign:foreign, rows:rows};
 }
 
-function calcDetail(a){
+function calcDetail(a, tot){
+  var ta=(tot>0);   
   var h='<details style="margin-top:11px"><summary>🧮 계산 내역 보기 — 이 수익률이 어떻게 나왔나</summary>'+
-    '<div class="ov" style="margin-top:8px"><table>'+
-    '<tr><th>자산군</th><th>비중</th><th>기대수익</th><th>기여도</th>'+
+    (ta?'<div class="mute" style="font-size:12px;margin-top:6px">비중 = <b>전체 투자 금액 '+won(tot)+'원</b>(1부 네 계좌 잔액 합계) 중 그 자산군에 들어간 몫</div>':'')+
+    '<div class="ov" style="margin-top:8px"><table id="pf_calc_tbl">'+
+    '<tr><th>자산군</th><th>비중</th>'+(ta?'<th>금액</th>':'')+'<th>기대수익</th><th>기여도</th>'+
     '<th>배당 기여</th><th>총보수</th><th>보수 차감</th></tr>';
   for(var i=0;i<a.rows.length;i++){
     var r=a.rows[i];
     if(r.unknown){
-      h+='<tr><td>'+esc(r.asset)+'</td><td>'+r.w.toFixed(1)+'%</td>'+
+      h+='<tr><td>'+esc(r.asset)+'</td><td>'+r.w.toFixed(1)+'%</td>'+(ta?'<td>'+won(tot*r.w/100)+'</td>':'')+
          '<td colspan="5" class="dn" style="text-align:left">수익률 DB에 없는 종목 — 계산에서 제외됨</td></tr>';
       continue;
     }
     h+='<tr><td>'+esc(r.asset)+'</td>'+
-       '<td>'+r.w.toFixed(1)+'%</td>'+
+       '<td>'+r.w.toFixed(1)+'%</td>'+(ta?'<td>'+won(tot*r.w/100)+'</td>':'')+
        '<td class="mute">'+r.ret.toFixed(1)+'%</td>'+
        '<td class="oi"><b>'+r.cr.toFixed(2)+'%p</b></td>'+
        '<td class="up">'+r.cd.toFixed(2)+'%p</td>'+
        '<td class="mute">'+r.fee.toFixed(2)+'%</td>'+
        '<td class="dn">−'+r.cf.toFixed(2)+'%p</td></tr>';
   }
-  h+='<tr style="background:var(--surf2)"><td><b>합계</b></td><td><b>100.0%</b></td><td>—</td>'+
+  h+='<tr style="background:var(--surf2)"><td><b>합계</b></td><td><b>100.0%</b></td>'+(ta?'<td><b>'+won(tot)+'</b></td>':'')+'<td>—</td>'+
      '<td class="oi"><b>'+a.ret.toFixed(2)+'%</b></td>'+
      '<td class="up"><b>'+a.div.toFixed(2)+'%</b></td><td>—</td>'+
      '<td class="dn"><b>−'+a.fee.toFixed(2)+'%</b></td></tr>';
-  h+='<tr style="background:var(--ok-bg)"><td colspan="6"><b>보수 차감 후 기대수익률</b> '+
+  h+='<tr style="background:var(--ok-bg)"><td colspan="'+(ta?7:6)+'"><b>보수 차감 후 기대수익률</b> '+
      '<span class="mute">('+a.ret.toFixed(2)+'% − '+a.fee.toFixed(2)+'%)</span></td>'+
      '<td class="up"><b>'+a.net.toFixed(2)+'%</b></td></tr>';
   h+='</table></div>'+
@@ -5317,6 +5319,71 @@ function calcDetail(a){
     '⚠️ 세금·환율·리밸런싱 효과는 <b>반영돼 있지 않습니다.</b> 미래 보장이 아니라 장기 평균 가정입니다.'+
     '</div></details>';
   return h;
+}
+
+function pfAggregate(key, list){
+  var R=pfAcctCalc(key, list), tot=0, W=list.map(function(){ return 0; });
+  R.forEach(function(r){
+    if(!(r.amt>0)) return;
+    var nl=pfAcctNorm(r.list); if(!nl) return;
+    tot+=r.amt;
+    for(var i=0;i<nl.length;i++) W[i]+=r.amt*(+nl[i].w||0)/100;
+  });
+  if(!(tot>0)) return {used:false, list:list, amt:0, R:R};
+  return {used:true, amt:tot, R:R, list:list.map(function(it, i){
+    var o={}, p; for(p in it) o[p]=it[p]; o.w=W[i]/tot*100; return o; })};
+}
+function pfInfoRender(key, list){
+  var box=document.getElementById('pfInfo'); if(!box||!list) return;
+  var a0=analyze(list), m=META[key]||{d:"",n:""};
+  var G=pfAggregate(key, list), a=G.used?analyze(G.list):a0;
+
+  var acct,cls;
+  if(a0.foreign.length){
+    acct='⛔ 연금저축·IRP 매수 불가'; cls='warn';
+  } else if(a0.risk>70){
+    acct='⚠️ 연금저축 ✅ / IRP ❌'; cls='warn';
+  } else {
+    acct='✅ 연금저축·IRP 모두 가능'; cls='ok';
+  }
+
+  var h='<div class="mute" id="pf_basis" style="font-size:12.5px;margin-top:12px">'+
+    (G.used?'📌 아래 숫자는 <b>네 계좌를 합친 전체</b>입니다 — 2-3-1-1~2-3-1-4 의 계좌별 비중을 '+
+            '<b>1부 잔액(합계 '+won(G.amt)+'원)</b>으로 가중해 합쳤습니다.'
+          :'📌 1부에 계좌 잔액이 없어 <b>전략 비중 그대로</b> 계산했습니다 &mdash; 잔액을 넣으면 계좌별 비중을 합친 «전체»로 바뀝니다.')+
+    '</div>'+
+    '<div class="grid" style="margin-top:8px">'+
+    '<div class="kv"><div class="l">기대 수익률 <span class="mute">(보수 차감 전)</span></div>'+
+      '<div class="v mute">'+a.ret.toFixed(1)+'%</div></div>'+
+    '<div class="kv"><div class="l">총보수 <span class="mute">(가중평균)</span></div>'+
+      '<div class="v dn">−'+a.fee.toFixed(2)+'%</div></div>'+
+    '<div class="kv" style="border-color:var(--oi)"><div class="l">보수 차감 후 <b>실질 기대수익</b></div>'+
+      '<div class="v oi">'+a.net.toFixed(2)+'%</div></div>'+   
+    '<div class="kv"><div class="l">예상 배당수익률</div><div class="v up">'+a.div.toFixed(1)+'%</div></div>'+
+    '<div class="kv"><div class="l">위험자산 비중</div><div class="v">'+a.risk.toFixed(0)+'%</div></div>'+
+    '</div>';
+
+  h+='<div class="card '+cls+'" style="margin-top:11px"><b>'+acct+'</b>';
+  if(a0.foreign.length) h+=' <span class="mute">— 미국 상장: '+esc(a0.foreign.join(', '))+'</span>';
+  else if(a0.risk>70) h+=' <span class="mute">— 위험자산 '+a0.risk.toFixed(0)+'% &gt; IRP 한도 70%</span>';
+  h+='<div style="font-size:12.5px;margin-top:7px">'+esc(m.d)+'</div>';
+  if(m.n) h+='<div style="font-size:12.5px;margin-top:6px" class="oi">'+esc(m.n)+'</div>';
+  h+='</div>';
+
+  window.__pfName = (PFNAME && PFNAME[key]) ? PFNAME[key]
+                   : (key==='custom' ? '나만의 포트폴리오' : key);
+  var PN=pfPublish(key, list, a0);
+  h+=calcDetail(a, G.used?G.amt:0);
+  h+='<div class="btns"><button id="pf_apply">↓ 계좌 평균 '+PN.avg.toFixed(1)+'%를 2-1 적립 시뮬레이션에 적용</button></div>';
+  var wasOpen=!!(box.querySelector('details[open]'));
+  box.innerHTML=h;
+  if(wasOpen){ var dd=box.querySelector('details'); if(dd) dd.open=true; }
+  var ap=document.getElementById('pf_apply');
+  if(ap) ap.addEventListener('click', function(){
+    var el=document.getElementById('ac_rate'); if(!el) return;
+    el.value=(window.__pfNet!=null?window.__pfNet:a0.net).toFixed(1); accRun();
+    el.scrollIntoView({behavior:'smooth',block:'center'});
+  });
 }
 
 function pfRender(){
@@ -5344,41 +5411,8 @@ function pfRender(){
     }
   }
   var list=PF[key]; if(!list) return;
-  var a=analyze(list), m=META[key]||{d:"",n:""};
-
-  var acct,cls;
-  if(a.foreign.length){
-    acct='⛔ 연금저축·IRP 매수 불가'; cls='warn';
-  } else if(a.risk>70){
-    acct='⚠️ 연금저축 ✅ / IRP ❌'; cls='warn';
-  } else {
-    acct='✅ 연금저축·IRP 모두 가능'; cls='ok';
-  }
-
-  var h='<div class="grid" style="margin-top:14px">'+
-    '<div class="kv"><div class="l">기대 수익률 <span class="mute">(보수 차감 전)</span></div>'+
-      '<div class="v mute">'+a.ret.toFixed(1)+'%</div></div>'+
-    '<div class="kv"><div class="l">총보수 <span class="mute">(가중평균)</span></div>'+
-      '<div class="v dn">−'+a.fee.toFixed(2)+'%</div></div>'+
-    '<div class="kv" style="border-color:var(--oi)"><div class="l">보수 차감 후 <b>실질 기대수익</b></div>'+
-      '<div class="v oi">'+a.net.toFixed(1)+'%</div></div>'+
-    '<div class="kv"><div class="l">예상 배당수익률</div><div class="v up">'+a.div.toFixed(1)+'%</div></div>'+
-    '<div class="kv"><div class="l">위험자산 비중</div><div class="v">'+a.risk.toFixed(0)+'%</div></div>'+
-    '</div>';
-
-  h+='<div class="card '+cls+'" style="margin-top:11px"><b>'+acct+'</b>';
-  if(a.foreign.length) h+=' <span class="mute">— 미국 상장: '+esc(a.foreign.join(', '))+'</span>';
-  else if(a.risk>70) h+=' <span class="mute">— 위험자산 '+a.risk.toFixed(0)+'% &gt; IRP 한도 70%</span>';
-  h+='<div style="font-size:12.5px;margin-top:7px">'+esc(m.d)+'</div>';
-  if(m.n) h+='<div style="font-size:12.5px;margin-top:6px" class="oi">'+esc(m.n)+'</div>';
-  h+='</div>';
-
-  window.__pfName = (PFNAME && PFNAME[key]) ? PFNAME[key]
-                   : (key==='custom' ? '나만의 포트폴리오' : key);
-  var PN=pfPublish(key, list, a);
-  h+=calcDetail(a);
-  h+='<div class="btns"><button id="pf_apply">↓ 계좌 평균 '+PN.avg.toFixed(1)+'%를 2-1 적립 시뮬레이션에 적용</button></div>';
-  document.getElementById('pfInfo').innerHTML=h;
+  var a=analyze(list);
+  pfInfoRender(key, list);
   var cb=document.getElementById('pfComp');
   if(cb){ try{ cb.innerHTML=(key==='custom')?'':pfComp(list); }catch(e){ cb.innerHTML=''; } }
   var vb=document.getElementById('pfVenn');
@@ -5386,12 +5420,6 @@ function pfRender(){
   try{ pfAcctRender(key, list); }catch(e){
     var pa=document.getElementById('pfAcct'); if(pa) pa.innerHTML='<div class="card warn">계좌별 포트폴리오 오류: '+esc(e&&e.message?e.message:e)+'</div>'; }
 
-  var ap=document.getElementById('pf_apply');
-  if(ap) ap.addEventListener('click', function(){
-    var el=document.getElementById('ac_rate'); if(!el) return;
-    el.value=(window.__pfNet!=null?window.__pfNet:a.net).toFixed(1); accRun();
-    el.scrollIntoView({behavior:'smooth',block:'center'});
-  });
   try{ acRateGap(); }catch(e){}     
 
   pfTable();
@@ -5491,12 +5519,12 @@ function pfAcctDiag(key, list){
     var net=r.a?r.a.net:null, y=(net!=null)?r.amt*net/100:0;
     if(net!=null){ tA+=r.amt; tY+=y; }
     h+='<tr><td>'+r.ac.n+'</td><td>'+(r.amt>0?won(r.amt)+'원':'<span class="mute">0원</span>')+'</td>'+
-       '<td class="oi"><b>'+(net!=null?net.toFixed(1)+'%':'—')+'</b></td>'+
+       '<td class="oi"><b>'+(net!=null?net.toFixed(2)+'%':'—')+'</b></td>'+
        '<td>'+(r.amt>0&&net!=null?won(y)+'원':'<span class="mute">—</span>')+'</td>'+
        '<td class="'+r.rule.cls+'" style="font-size:12px">'+r.rule.t+'</td></tr>';
   });
   h+='<tr style="background:var(--surf2)"><td><b>합계</b></td><td><b>'+won(tA)+'원</b></td>'+
-     '<td class="oi"><b>'+(tA>0?(tY/tA*100).toFixed(1)+'%':'—')+'</b></td><td><b>'+(tA>0?won(tY)+'원':'—')+'</b></td><td></td></tr>'+
+     '<td class="oi"><b>'+(tA>0?(tY/tA*100).toFixed(2)+'%':'—')+'</b></td><td><b>'+(tA>0?won(tY)+'원':'—')+'</b></td><td></td></tr>'+
      '</table></div>'+
      (PN?'<div class="card ok" style="margin-top:8px;font-size:12.5px">➡️ <b>3부 연금 계산에 넘기는 수익률</b> — '+
        '연금저축 <b>'+PN.by.sv.toFixed(1)+'%</b> · IRP <b>'+PN.by.irp.toFixed(1)+'%</b> (계좌마다 따로 굴림) · '+
@@ -5511,6 +5539,7 @@ function pfAcctRefresh(){
   var box=document.getElementById('pfAcct');
   if(box && box.contains(document.activeElement)) pfAcctDiag(key, list);
   else pfAcctRender(key, list);
+  try{ pfInfoRender(key, list); }catch(e){}
 }
 function pfRecalcLater(){
   try{ acRateGap(); }catch(e){}
@@ -5534,13 +5563,14 @@ function pfAcctBoot(){
       if(sn) sn.innerHTML=ok?'':' · 합계가 100%가 아니라 100% 기준으로 환산해 계산합니다';
     }
     pfAcctDiag(key, list);
+    try{ pfInfoRender(key, list); }catch(err){}
     pfRecalcLater();
   });
   box.addEventListener('click', function(e){
     var b=e.target; if(!b||!b.classList||!b.classList.contains('pfreset')) return;
     var key=document.getElementById('pfSelect').value, st=pfAcctLoad();
     if(st[key]) delete st[key][b.getAttribute('data-acct')];
-    pfAcctSave(st); pfAcctRender(key, PF[key]); pfRecalcLater();
+    pfAcctSave(st); pfAcctRender(key, PF[key]); try{ pfInfoRender(key, PF[key]); }catch(err){} pfRecalcLater();
   });
   var T=null;
   document.addEventListener('input', function(e){
