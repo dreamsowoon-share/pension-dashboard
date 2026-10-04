@@ -318,7 +318,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
   .grp{padding:0 9px 10px}
 }
 </style></head><body>
-<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.69", "built": "2026-10-04 17:58", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.69", "t": "🔁 분배금 재투자 시 수익률 따로 표시", "d": "2026-10-04"}, {"v": "v31.68", "t": "📈 KODEX 200타겟위클리커버드콜 «종목 가정»", "d": "2026-10-04"}, {"v": "v31.67", "t": "📈 미국 커버드콜 2종 기대수익 가정을 실측에 맞춤", "d": "2026-10-04"}, {"v": "v31.66", "t": "🐛 계좌 비중을 고쳐도 2-3-2 숫자가 안 바뀌던 것 · «전체» = 네 계좌 합산", "d": "2026-10-04"}, {"v": "v31.65", "t": "🐛 «담을 계좌»를 눌렀는데 담기지 않던 것", "d": "2026-10-04"}, {"v": "v31.64", "t": "☑️ ETF 고르기에서 «담을 계좌» 고르기", "d": "2026-10-04"}, {"v": "v31.63", "t": "➡️ 계좌별 수익률을 3부 연금 계산에", "d": "2026-10-04"}, {"v": "v31.62", "t": "💼 일반 계좌 · 계좌별 포트폴리오(2-3-1-1~4) · 계좌별 수익(2-3-2)", "d": "2026-10-04"}]};</script>
+<script>window.__STORE_KEY__="pension_app_share2_v1";window.__BLANK_START__=true;window.__VER__={"v": "v31.70", "built": "2026-10-04 18:11", "variant": "share2", "web": "https://dreamsowoon-share.github.io/pension-dashboard/", "recent": [{"v": "v31.70", "t": "🔗 2-4 기대 수익률이 2-3 을 따라간다", "d": "2026-10-04"}, {"v": "v31.69", "t": "🔁 분배금 재투자 시 수익률 따로 표시", "d": "2026-10-04"}, {"v": "v31.68", "t": "📈 KODEX 200타겟위클리커버드콜 «종목 가정»", "d": "2026-10-04"}, {"v": "v31.67", "t": "📈 미국 커버드콜 2종 기대수익 가정을 실측에 맞춤", "d": "2026-10-04"}, {"v": "v31.66", "t": "🐛 계좌 비중을 고쳐도 2-3-2 숫자가 안 바뀌던 것 · «전체» = 네 계좌 합산", "d": "2026-10-04"}, {"v": "v31.65", "t": "🐛 «담을 계좌»를 눌렀는데 담기지 않던 것", "d": "2026-10-04"}, {"v": "v31.64", "t": "☑️ ETF 고르기에서 «담을 계좌» 고르기", "d": "2026-10-04"}, {"v": "v31.63", "t": "➡️ 계좌별 수익률을 3부 연금 계산에", "d": "2026-10-04"}]};</script>
 <script>(function(){try{var t=localStorage.getItem(window.__STORE_KEY__+'_theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <script>
 (function(){
@@ -345,7 +345,7 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 <div id="diagmsg" class="mute" style="font-size:12.5px;margin-top:6px;word-break:break-all"></div></div>
 <h1>💰 연금관리, 누구나 노력하면 할 수 있다!</h1>
 <div class="sub">입력값은 <b>각자의 PC나 핸드폰에만</b> 저장되고, <b>다른 사람은 볼 수 없습니다</b><br>
-<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.69</b> &middot; 2026-10-04 17:58 업그레이드되었습니다</span>
+<span style="background:#4f9cf922;border:1px solid #4f9cf9;color:#4f9cf9;border-radius:5px;padding:2px 9px;font-size:12px;font-weight:700;display:inline-block;margin:5px 6px 0 0">📤 공유2 · 배포용</span><span class="verline"><b>v31.70</b> &middot; 2026-10-04 18:11 업그레이드되었습니다</span>
 <button class="tbtn" id="verbtn" type="button">📋 바뀐 내용 보기</button>
 <span class="themeseg" role="group" aria-label="화면 밝기"><button class="tbtn" id="theme_dark" type="button">🌙 어둡게</button><button class="tbtn" id="theme_light" type="button">☀️ 밝게</button></span>
 <button class="tbtn" id="themebtn" type="button" hidden>🌙 어두운 화면</button>
@@ -676,7 +676,9 @@ padding:11px 13px;text-decoration:none;color:var(--txt)}
 </details>
 
 <div class="row2"><label>기대 수익률 <small>연 %</small></label>
-  <input type="number" step="0.1" id="ac_rate" value="7"></div>
+  <input type="number" step="0.01" id="ac_rate" value="7"></div>
+
+<select id="ac_rate_src" class="vis-hidden" tabindex="-1" aria-hidden="true"><option value="pf" selected>2-3 따라가기</option><option value="manual">직접</option></select>
 <div id="ac_rate_gap"></div>
 <div class="row2"><label>물가상승률 <small>연 %</small></label>
   <input type="number" step="0.1" id="ac_infl" value="2.5"></div>
@@ -5128,28 +5130,38 @@ function acPaySum(){
   });
 }
 
+function acRateSrc(){ var m=document.getElementById('ac_rate_src'); return (m&&m.value==='manual')?'manual':'pf'; }
 function acRateGap(){
   var box=document.getElementById('ac_rate_gap'); if(!box) return;
   var el=document.getElementById('ac_rate'); if(!el) return;
-  var here=parseFloat(el.value), pf=window.__pfNet;
-  if(typeof pf!=='number' || !(pf>0) || isNaN(here)){ box.innerHTML=''; return; }
-  if(Math.abs(here-pf)<0.05){
+  var pf=window.__pfNet, mode=acRateSrc();
+  if(typeof pf!=='number' || !(pf>0)){ box.innerHTML=''; return; }
+  if(mode==='pf'){
+    var want=pf.toFixed(2);
+    if(el.value!==want){ el.value=want; accRun(); return; }   
     box.innerHTML='<div class="card ok" style="margin:7px 0 0;font-size:12.5px">'
-      +'✅ <b>2-3 「'+esc(window.__pfName||'선택한 전략')+'」 계좌 평균</b>(연금저축·IRP·ISA) 보수 차감 후 수익률 '
-      +'<b>'+pf.toFixed(1)+'%</b> 와 같습니다.</div>';
+      +'🔗 <b>2-3 「'+esc(window.__pfName||'선택한 전략')+'」 계좌 평균</b>(연금저축·IRP·ISA · 보수 차감 후) <b>'+want+'%</b> 를 자동으로 따라갑니다'
+      +' <span class="mute">— 2-3 에서 비중을 바꾸면 여기도 바뀝니다 · 다른 값을 쓰려면 칸에 직접 적으십시오</span></div>';
     return;
   }
-  box.innerHTML='<div class="card warn" style="margin:7px 0 0;font-size:12.5px">'
-    +'⚠️ <b>2-3 「'+esc(window.__pfName||'선택한 전략')+'」 계좌 평균</b>(연금저축·IRP·ISA) 보수 차감 후 수익률은 '
-    +'<b class="oi">'+pf.toFixed(1)+'%</b> 인데, 여기는 <b>'+here.toFixed(1)+'%</b> 입니다.'
-    +'<div class="mute" style="margin-top:4px">두 칸은 <b>자동으로 이어지지 않습니다</b>. '
-    +'적립기에 일부러 다른 수익률을 쓰는 것도 괜찮지만, <b>모르고</b> 다른 것이라면 맞추십시오 '
+  var here=parseFloat(el.value);
+  if(isNaN(here)){ box.innerHTML=''; return; }
+  box.innerHTML='<div class="card '+(Math.abs(here-pf)<0.005?'ok':'warn')+'" style="margin:7px 0 0;font-size:12.5px">'
+    +'✍️ <b>직접 적은 값</b> '+here.toFixed(2)+'% 을 씁니다 — 2-3 계좌 평균은 <b class="oi">'+pf.toFixed(2)+'%</b> 입니다.'
+    +'<div class="mute" style="margin-top:4px">직접 적은 동안은 2-3 을 바꿔도 이 칸이 안 바뀝니다 '
     +'&mdash; <b>3-1-2</b> 는 적립에 이 칸을, 인출기에 2-3 값을 씁니다.</div>'
     +'<div class="btns" style="margin-top:7px">'
-    +'<button id="ac_rate_fix">2-3 와 같게 '+pf.toFixed(1)+'% 로 맞추기</button></div></div>';
+    +'<button id="ac_rate_fix">🔗 2-3 값('+pf.toFixed(2)+'%)을 다시 따라가기</button></div></div>';
   var b=document.getElementById('ac_rate_fix');
   if(b) b.addEventListener('click', function(){
-    el.value=pf.toFixed(1); accRun();
+    var m=document.getElementById('ac_rate_src'); if(m){ m.value='pf'; m.dispatchEvent(new Event('change',{bubbles:true})); }
+    acRateGap();
+  });
+}
+function acRateBoot(){
+  var el=document.getElementById('ac_rate'); if(!el) return;
+  el.addEventListener('input', function(){
+    var m=document.getElementById('ac_rate_src'); if(m && m.value!=='manual'){ m.value='manual'; m.dispatchEvent(new Event('change',{bubbles:true})); }
   });
 }
 
@@ -5396,10 +5408,12 @@ function pfInfoRender(key, list){
   var wasOpen=!!(box.querySelector('details[open]'));
   box.innerHTML=h;
   if(wasOpen){ var dd=box.querySelector('details'); if(dd) dd.open=true; }
+  try{ acRateGap(); }catch(e){}     
   var ap=document.getElementById('pf_apply');
   if(ap) ap.addEventListener('click', function(){
     var el=document.getElementById('ac_rate'); if(!el) return;
-    el.value=(window.__pfNet!=null?window.__pfNet:a0.net).toFixed(1); accRun();
+    var m=document.getElementById('ac_rate_src'); if(m) m.value='pf';
+    el.value=(window.__pfNet!=null?window.__pfNet:a0.net).toFixed(2); accRun();
     el.scrollIntoView({behavior:'smooth',block:'center'});
   });
 }
@@ -5957,7 +5971,7 @@ function extBoot(){
     if(wa) wa.addEventListener('change', function(){ accRun(); });
     tkLoad(); cwRestore();
     acSeedAge(); acSyncPrincipal();
-    pfAcctBoot();
+    pfAcctBoot(); acRateBoot();
     accRun(); pfSyncBudget(); pfRender();
   }catch(e){
     var box=document.getElementById('accOut');
